@@ -1,4 +1,9 @@
 {
   "arrowParens": "avoid",
-  "semi": false
+  "semi": false,
+  "printWidth": 100,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "endOfLine": "lf"
 }
