@@ -2457,6 +2457,21 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type CampingImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CampingImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type FlowerImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FlowerImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type MarlowImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type MarlowImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type GetMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 

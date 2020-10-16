@@ -1,0 +1,26 @@
+.container {
+  height: auto;
+}
+
+.text {
+  text-align: center;
+}
+
+.column {
+  align-items: center;
+}
+
+@media (min-width: 70em) {
+  .text {
+    text-align: left;
+  }
+  .column {
+    align-items: flex-start;
+  }
+  .container {
+    height: 75vh;
+  }
+  .row {
+    margin: auto 0;
+  }
+}
