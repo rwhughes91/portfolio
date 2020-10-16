@@ -22,6 +22,7 @@ body {
 
 html {
   font-size: 62.5%;
+  background-color: var(--light-gray-1);
 }
 
 @media (max-width: 56.25em) {
@@ -34,7 +35,7 @@ html {
     font-size: 56.25%;
   }
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   html {
     font-size: 70%;
   }

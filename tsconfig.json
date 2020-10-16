@@ -13,13 +13,13 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "@components": ["./src/components/*"],
-      "@pages": ["./src/pages/*"],
-      "@styles": ["./src/styles/*"],
-      "@utils": ["./src/utils/*"],
-      "@hooks": ["./src/hooks/*"],
-      "@images": ["./src/images/*"],
-      "@types": ["./src/types/*"]
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@images/*": ["./src/images/*"],
+      "@types/*": ["./src/types/*"]
     }
   },
   "exclude": ["node_modules", "public", ".cache"]

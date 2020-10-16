@@ -1,0 +1,17 @@
+.text {
+  color: var(--dark-blue-1);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.large {
+  font-size: 2rem;
+}
+.medium {
+  font-size: 1.8rem;
+}
+.small {
+  font-size: 1.6rem;
+}

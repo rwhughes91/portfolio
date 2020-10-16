@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import Layout from '@components/Layout/Layout'
 
 import { GetMetadataQuery } from '../../graphql-types'
 
@@ -14,10 +15,7 @@ const home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
           <link rel="canonical" href={data.site?.siteMetadata?.link} />
         )}
       </Helmet>
-      <div style={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
-        <h2>gatsby-background-image</h2>
-      </div>
-      <div style={{ backgroundColor: 'blue', width: '100%', height: '50rem' }}></div>
+      <Layout />
     </>
   )
 }
