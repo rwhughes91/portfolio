@@ -5,8 +5,20 @@ import Column from '@components/Layout/Column/Column'
 import Row from '@components/Layout/Row/Row'
 import Text from '@components/ui/Text/Text'
 import ImageContainer from '@components/ui/ImageContainer/ImageContainer'
+import { useStaticQuery, graphql } from 'gatsby'
+import List from '@components/ui/List/List'
+
+import { GetAboutUsDataQuery } from '../../../../graphql-types'
 
 const AboutScreen: React.FC = () => {
+  const data: GetAboutUsDataQuery = useStaticQuery(query)
+  const techTags = data.allDataJson.nodes[0].languages!.concat(
+    data.allDataJson.nodes[0].js!,
+    data.allDataJson.nodes[0].server!,
+    data.allDataJson.nodes[0].web!,
+    data.allDataJson.nodes[0].databases!,
+    data.allDataJson.nodes[0].tools!
+  )
   return (
     <Section polygon>
       <Column customClassNames={classes.container}>
@@ -14,43 +26,49 @@ const AboutScreen: React.FC = () => {
           About
         </Text>
         <Row customClassNames={classes.row}>
-          <Column
-            customClassNames={classes.column}
-            styles={{
-              justifyContent: 'center',
-              width: '100%',
-              padding: '0 3rem',
-              marginBottom: '3rem',
-            }}
-          >
-            <Text size="small" bold>
-              Its' nice to meet you!
+          <Column customClassNames={[classes.column, classes.pad].join(' ')}>
+            <Text size="medium" bold customClassNames={classes.text}>
+              {data.allDataJson.nodes[0].introduction as string}
             </Text>
-            <Text size="small" styles={{ marginTop: '3rem', marginBottom: '3rem' }}>
-              I live in Sacramento, CA with my girlfriend and our cat.
+            <Text
+              size="medium"
+              styles={{ marginTop: '3rem', marginBottom: '3rem' }}
+              customClassNames={classes.text}
+            >
+              {data.allDataJson.nodes[0].header as string}
             </Text>
-            <Text size="small" customClassNames={classes.text}>
-              I'm a perpetual learner and love all things related to web development; however, this
-              wasn't always the case. I graduated from UC San Diego with majors in Economics and
-              Neuroscience and shortly after graduation began working as an analyst at a biotech
-              focused hedge fund. While I was incredibly thankful for this rare and unique
-              opportunity, I wasn't passionate about my job. This led me to search for a career I
-              would love and I'm proud to say it led me to full-stack web development.
+            <Text size="medium" customClassNames={classes.text}>
+              {data.allDataJson.nodes[0].body as string}
             </Text>
-            <Text size="small" styles={{ marginTop: '3rem', marginBottom: '3rem' }}>
-              I also enjoy watching sports, going on hikes, and corgis!
+            <Text
+              size="medium"
+              styles={{ marginTop: '3rem', marginBottom: '3rem' }}
+              customClassNames={classes.text}
+            >
+              {data.allDataJson.nodes[0].footer as string}
             </Text>
-            <Text size="small">Want to know more?</Text>
+            <div style={{ display: 'flex', flexDirection: 'column' }} className={classes.column}>
+              <Text
+                size="medium"
+                bold
+                styles={{ marginBottom: '.5rem' }}
+                customClassNames={classes.text}
+              >
+                Tech I use:
+              </Text>
+              <List items={techTags as string[]} />
+            </div>
           </Column>
           <Column
             styles={{
-              width: '100%',
               alignSelf: 'stretch',
-              justifyContent: 'center',
-              padding: '0 1rem',
+              width: '100%',
             }}
+            customClassNames={[classes.column, classes.pad].join(' ')}
           >
-            <ImageContainer />
+            <div className={classes.imageContainer}>
+              <ImageContainer />
+            </div>
           </Column>
         </Row>
       </Column>
@@ -59,3 +77,22 @@ const AboutScreen: React.FC = () => {
 }
 
 export default React.memo(AboutScreen)
+
+const query = graphql`
+  query getAboutUsData {
+    allDataJson {
+      nodes {
+        introduction
+        header
+        body
+        footer
+        languages
+        js
+        server
+        web
+        databases
+        tools
+      }
+    }
+  }
+`

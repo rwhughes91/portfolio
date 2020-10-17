@@ -3,10 +3,11 @@
 }
 
 .bold {
+  font-weight: 600;
 }
 
 .large {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .medium {
   font-size: 1.8rem;

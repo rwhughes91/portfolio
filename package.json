@@ -22,6 +22,7 @@
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-typography": "^2.5.13",
     "gatsby-source-filesystem": "^2.3.34",
+    "gatsby-transformer-json": "^2.4.14",
     "gatsby-transformer-sharp": "^2.5.17",
     "intersection-observer": "^0.11.0",
     "react": "^16.12.0",
@@ -29,7 +30,7 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-alton": "^0.16.19"
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.0",

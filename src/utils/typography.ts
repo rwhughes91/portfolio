@@ -1,7 +1,7 @@
 import Typography from 'typography'
-import altonTheme from 'typography-theme-alton'
+import fairyGatesTheme from 'typography-theme-fairy-gates'
 
-const typography = new Typography(altonTheme)
+const typography = new Typography(fairyGatesTheme)
 
 // Export helper functions
 export const { scale, rhythm, options } = typography

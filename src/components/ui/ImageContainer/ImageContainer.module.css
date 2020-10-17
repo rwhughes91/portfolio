@@ -1,6 +1,5 @@
 .composition {
   width: 100%;
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,14 +16,12 @@
 }
 
 @media (min-width: 70em) {
-  .composition {
-    height: 100%;
-  }
   .composition:hover .image:not(:hover) {
     transform: scale(0.95);
   }
   .image {
     position: absolute;
+    width: 32rem;
   }
   .image:hover {
     z-index: 10;
@@ -32,15 +29,33 @@
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   }
   .firstImage {
-    left: 0;
     top: 0;
+    left: 0;
   }
   .secondImage {
+    top: 10%;
     right: 0;
-    top: 2rem;
   }
   .thirdImage {
     left: 20%;
     bottom: 0;
+  }
+}
+
+@media (min-width: 80em) {
+  .image {
+    width: 35rem;
+  }
+}
+
+@media (min-width: 85em) {
+  .image {
+    width: 37rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .image {
+    width: 38rem;
   }
 }

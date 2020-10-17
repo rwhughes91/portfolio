@@ -8,20 +8,28 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-graphql-codegen',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
         path: path.join(__dirname, 'src', 'images'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: path.join(__dirname, 'src', 'data'),
       },
     },
     {
