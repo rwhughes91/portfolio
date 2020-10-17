@@ -21,7 +21,7 @@
   }
   .image {
     position: absolute;
-    width: 32rem;
+    width: 55%;
   }
   .image:hover {
     z-index: 10;
@@ -39,23 +39,5 @@
   .thirdImage {
     left: 20%;
     bottom: 0;
-  }
-}
-
-@media (min-width: 80em) {
-  .image {
-    width: 35rem;
-  }
-}
-
-@media (min-width: 85em) {
-  .image {
-    width: 37rem;
-  }
-}
-
-@media (min-width: 90em) {
-  .image {
-    width: 38rem;
   }
 }

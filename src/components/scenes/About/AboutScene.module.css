@@ -40,23 +40,12 @@
     margin: auto 0;
   }
   .imageContainer {
-    height: 60%;
+    height: 350px;
   }
 }
 
-@media (min-width: 80em) {
-  .imageContainer {
-    height: 70%;
-  }
-}
 @media (min-width: 85em) {
   .imageContainer {
-    height: 75%;
-  }
-}
-
-@media (min-width: 90em) {
-  .imageContainer {
-    height: 80%;
+    height: 400px;
   }
 }
