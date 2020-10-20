@@ -30,7 +30,7 @@ html {
     font-size: 50%;
   }
 }
-@media (max-width: 70em) {
+@media (max-width: 75em) {
   html {
     font-size: 56.25%;
   }

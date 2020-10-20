@@ -1,3 +1,9 @@
+.imageContainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
 .composition {
   width: 100%;
   display: flex;
@@ -16,12 +22,16 @@
 }
 
 @media (min-width: 70em) {
+  .imageContainer {
+    height: 300px;
+  }
+
   .composition:hover .image:not(:hover) {
     transform: scale(0.95);
   }
   .image {
     position: absolute;
-    width: 55%;
+    max-width: 300px;
   }
   .image:hover {
     z-index: 10;
@@ -37,7 +47,42 @@
     right: 0;
   }
   .thirdImage {
-    left: 20%;
     bottom: 0;
+    right: 20%;
+  }
+}
+
+@media (min-width: 75em) {
+  .image {
+    max-width: 325px;
+  }
+  .imageContainer {
+    height: 325px;
+  }
+}
+
+@media (min-width: 80em) {
+  .image {
+    max-width: 350px;
+  }
+  .imageContainer {
+    height: 350px;
+  }
+}
+@media (min-width: 85em) {
+  .imageContainer {
+    height: 375px;
+  }
+  .image {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 90em) {
+  .imageContainer {
+    height: 400px;
+  }
+  .image {
+    max-width: 400px;
   }
 }

@@ -7,6 +7,7 @@ import Text from '@components/ui/Text/Text'
 import ImageContainer from '@components/ui/ImageContainer/ImageContainer'
 import { useStaticQuery, graphql } from 'gatsby'
 import List from '@components/ui/List/List'
+import HeaderText from '@components/ui/HeaderText/HeaderText'
 
 import { GetAboutUsDataQuery } from '../../../../graphql-types'
 
@@ -20,34 +21,24 @@ const AboutScreen: React.FC = () => {
     data.allDataJson.nodes[0].tools!
   )
   return (
-    <Section polygon>
+    <Section polygon pad>
       <Column customClassNames={classes.container}>
-        <Text bold size="large" styles={{ marginBottom: '3rem' }}>
-          About
-        </Text>
+        <HeaderText>About</HeaderText>
         <Row customClassNames={classes.row}>
           <Column customClassNames={[classes.column, classes.pad].join(' ')}>
             <Text size="medium" bold customClassNames={classes.text}>
               {data.allDataJson.nodes[0].introduction as string}
             </Text>
-            <Text
-              size="medium"
-              styles={{ marginTop: '3rem', marginBottom: '3rem' }}
-              customClassNames={classes.text}
-            >
+            <Text size="medium" customClassNames={[classes.text, classes.marginVertical].join(' ')}>
               {data.allDataJson.nodes[0].header as string}
             </Text>
             <Text size="medium" customClassNames={classes.text}>
               {data.allDataJson.nodes[0].body as string}
             </Text>
-            <Text
-              size="medium"
-              styles={{ marginTop: '3rem', marginBottom: '3rem' }}
-              customClassNames={classes.text}
-            >
+            <Text size="medium" customClassNames={[classes.text, classes.marginVertical].join(' ')}>
               {data.allDataJson.nodes[0].footer as string}
             </Text>
-            <div style={{ display: 'flex', flexDirection: 'column' }} className={classes.column}>
+            <div className={classes.column}>
               <Text
                 size="medium"
                 bold
@@ -64,11 +55,9 @@ const AboutScreen: React.FC = () => {
               alignSelf: 'stretch',
               width: '100%',
             }}
-            customClassNames={[classes.column, classes.pad].join(' ')}
+            customClassNames={[classes.column, classes.padImage].join(' ')}
           >
-            <div className={classes.imageContainer}>
-              <ImageContainer />
-            </div>
+            <ImageContainer />
           </Column>
         </Row>
       </Column>

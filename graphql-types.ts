@@ -2729,6 +2729,36 @@ export type MarlowImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type MarlowImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
+export type ColorngCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ColorngCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type DrugCurvesCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type DrugCurvesCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type LjpcCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type LjpcCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type OdonateCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type OdonateCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type TtlblCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TtlblCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type GetMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 

@@ -5,12 +5,19 @@ interface Props {
   styles?: React.CSSProperties
   children?: JSX.Element | JSX.Element[] | string | null
   polygon?: boolean
+  pad?: boolean
+  fill?: boolean
 }
 
-const Section: React.FC<Props> = ({ styles, polygon, children }) => {
+const Section: React.FC<Props> = ({ styles, polygon, pad, fill, children }) => {
   return (
     <section
-      className={[classes.section, polygon ? classes.polygon : null].join(' ')}
+      className={[
+        classes.section,
+        polygon ? classes.polygon : null,
+        pad ? classes.pad : null,
+        fill ? classes.fill : null,
+      ].join(' ')}
       style={styles}
     >
       {children}

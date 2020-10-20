@@ -5,13 +5,15 @@ interface Props {
   children: string
   styles?: React.CSSProperties
   bold?: boolean
-  size: 'small' | 'medium' | 'large'
+  size: 'small' | 'medium' | 'large' | 'xSmall'
   customClassNames?: string
 }
 
 const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames }) => {
   const classNames = [classes.text, bold ? classes.bold : null, customClassNames]
   switch (size) {
+    case 'xSmall':
+      classNames.push(classes.extraSmall)
     case 'small':
       classNames.push(classes.small)
     case 'medium':

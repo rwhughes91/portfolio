@@ -3,10 +3,9 @@ import classes from './ScrollWidget.module.css'
 
 const ScrollWidget: React.FC = () => {
   return (
-    <>
-      <div className={classes.mouse}></div>
-      <p className={classes.scroll}>scroll</p>
-    </>
+    <div className={classes.box}>
+      <span className={classes.scroll} />
+    </div>
   )
 }
 
