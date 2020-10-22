@@ -1,8 +1,6 @@
 .section {
-  width: 100vw;
+  width: 100%;
   height: auto;
-  min-height: 750px;
-  max-height: 1500px;
   background-color: var(--light-gray-2);
   overflow: hidden;
   display: flex;
@@ -11,7 +9,7 @@
 }
 
 .fill {
-  height: 100vh;
+  height: max(100vh, 75rem);
 }
 
 .pad {
@@ -19,11 +17,13 @@
   padding-bottom: 5rem;
 }
 
-@media (min-width: 70em) and (min-height: 750px) {
+@media (min-width: 1120px) and (min-height: 700px) {
   .section {
     height: 100vh;
+    min-height: 75rem;
+    max-height: 150rem;
   }
   .section.polygon {
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 }

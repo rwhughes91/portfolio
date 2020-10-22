@@ -15,74 +15,74 @@
 
 .image {
   width: 100vw;
-  max-width: 38rem;
+  max-width: 30rem;
   z-index: 0;
   transition: all 0.2s;
   box-shadow: var(--box-shadow);
 }
 
-@media (min-width: 70em) {
-  .imageContainer {
-    height: 300px;
+@media (min-width: 1120px) {
+  .imageContainerCollage {
+    height: 30rem;
   }
 
-  .composition:hover .image:not(:hover) {
+  .imageContainerCollage:hover .image:not(:hover) {
     transform: scale(0.95);
   }
-  .image {
+
+  .imageCollage {
     position: absolute;
-    max-width: 300px;
   }
-  .image:hover {
+  .imageCollage:hover {
     z-index: 10;
     transform: scale(1.05);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   }
-  .firstImage {
+  .imageCollage.firstImage {
     top: 0;
     left: 0;
   }
-  .secondImage {
+  .imageCollage.secondImage {
     top: 10%;
     right: 0;
   }
-  .thirdImage {
+  .imageCollage.thirdImage {
     bottom: 0;
     right: 20%;
   }
 }
 
-@media (min-width: 75em) {
+@media (min-width: 1200px) {
   .image {
-    max-width: 325px;
+    max-width: 32.5rem;
   }
-  .imageContainer {
-    height: 325px;
+  .imageContainerCollage {
+    height: 32.5rem;
   }
 }
 
-@media (min-width: 80em) {
-  .image {
-    max-width: 350px;
+@media (min-width: 1280px) {
+  .imageCollage {
+    max-width: 35rem;
   }
-  .imageContainer {
-    height: 350px;
+  .imageContainerCollage {
+    height: 35rem;
   }
 }
-@media (min-width: 85em) {
-  .imageContainer {
-    height: 375px;
+@media (min-width: 1360px) {
+  .imageContainerCollage {
+    height: 37.5rem;
   }
-  .image {
-    max-width: 375px;
+  .imageCollage {
+    max-width: 37.5rem;
   }
 }
 
-@media (min-width: 90em) {
-  .imageContainer {
-    height: 400px;
+@media (min-width: 1800px) {
+  .imageContainerCollage {
+    height: 35rem;
   }
-  .image {
-    max-width: 400px;
+  .imageCollage {
+    max-width: 35rem;
   }
 }

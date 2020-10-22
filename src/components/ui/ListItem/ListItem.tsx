@@ -9,7 +9,7 @@ interface Props {
 const ListItem: React.FC<Props> = ({ text }) => {
   return (
     <li className={classes.listItem}>
-      <Text size="small">{text}</Text>
+      <Text size="medium">{text}</Text>
     </li>
   )
 }

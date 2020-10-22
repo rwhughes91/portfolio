@@ -1,5 +1,19 @@
 .header {
+  width: 100%;
   color: var(--light-gray-2);
   text-align: center;
+  padding: 0 1rem;
   font-size: 3rem;
+}
+
+@media (min-width: 592px) {
+  .header {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    font-size: 4rem;
+  }
 }

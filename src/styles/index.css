@@ -4,6 +4,7 @@
   --dark-blue-3: #193249;
   --light-gray-1: #f6f7f9;
   --light-gray-2: #e9ecef;
+  --purple: #7510f7;
   --box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   --max-width: 1500px;
 }
@@ -21,22 +22,24 @@ body {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   background-color: var(--light-gray-1);
+  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 900px) {
   html {
-    font-size: 50%;
+    font-size: 8px;
   }
 }
-@media (max-width: 75em) {
+@media (max-width: 1200px) {
   html {
-    font-size: 56.25%;
+    font-size: 9px;
   }
 }
-@media (min-width: 112.5em) {
+@media (min-width: 1800px) {
   html {
-    font-size: 70%;
+    font-size: 11.2px;
   }
 }

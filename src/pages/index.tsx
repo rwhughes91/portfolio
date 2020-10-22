@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useRef, useCallback } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import Layout from '@components/Layout/Layout'
+
+import HomeScene from '@components/scenes/Home/HomeScene'
+import AboutScene from '@components/scenes/About/AboutScene'
+import ProjectsScene from '@components/scenes/Projects/ProjectsScene'
+import ContactScene from '@components/scenes/Contact/ContactScene'
 
 import { GetMetadataQuery } from '../../graphql-types'
 
 const home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
+  const aboutSectionRef = useRef<HTMLDivElement>(null)
+
+  const onScrollHandler = useCallback(() => {
+    if (aboutSectionRef.current) {
+      window.scrollTo(0, aboutSectionRef.current.offsetTop)
+    }
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -15,7 +27,10 @@ const home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
           <link rel="canonical" href={data.site?.siteMetadata?.link} />
         )}
       </Helmet>
-      <Layout />
+      <HomeScene onScrollHandler={onScrollHandler} />
+      <AboutScene customRef={aboutSectionRef} />
+      <ProjectsScene />
+      <ContactScene />
     </>
   )
 }

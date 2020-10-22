@@ -7,11 +7,13 @@ interface Props {
   polygon?: boolean
   pad?: boolean
   fill?: boolean
+  customRef?: React.MutableRefObject<HTMLDivElement | null>
 }
 
-const Section: React.FC<Props> = ({ styles, polygon, pad, fill, children }) => {
+const Section: React.FC<Props> = ({ styles, polygon, pad, fill, children, customRef }) => {
   return (
     <section
+      ref={customRef}
       className={[
         classes.section,
         polygon ? classes.polygon : null,

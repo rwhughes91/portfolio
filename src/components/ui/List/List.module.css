@@ -1,17 +1,15 @@
 .list {
   display: flex;
   flex-direction: row;
-  list-style-type: circle;
+  list-style-type: none;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  padding: 0 2rem;
 }
 
-@media (min-width: 70em) {
+@media (min-width: 1120px) {
   .list {
     justify-content: flex-start;
-    padding-left: 15px;
   }
 }

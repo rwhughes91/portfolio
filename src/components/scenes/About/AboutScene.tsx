@@ -11,8 +11,13 @@ import HeaderText from '@components/ui/HeaderText/HeaderText'
 
 import { GetAboutUsDataQuery } from '../../../../graphql-types'
 
-const AboutScreen: React.FC = () => {
+interface Props {
+  customRef?: React.MutableRefObject<HTMLDivElement | null>
+}
+
+const AboutScreen: React.FC<Props> = ({ customRef }) => {
   const data: GetAboutUsDataQuery = useStaticQuery(query)
+
   const techTags = data.allDataJson.nodes[0].languages!.concat(
     data.allDataJson.nodes[0].js!,
     data.allDataJson.nodes[0].server!,
@@ -20,8 +25,9 @@ const AboutScreen: React.FC = () => {
     data.allDataJson.nodes[0].databases!,
     data.allDataJson.nodes[0].tools!
   )
+
   return (
-    <Section polygon pad>
+    <Section polygon pad customRef={customRef}>
       <Column customClassNames={classes.container}>
         <HeaderText>About</HeaderText>
         <Row customClassNames={classes.row}>
@@ -51,13 +57,9 @@ const AboutScreen: React.FC = () => {
             </div>
           </Column>
           <Column
-            styles={{
-              alignSelf: 'stretch',
-              width: '100%',
-            }}
-            customClassNames={[classes.column, classes.padImage].join(' ')}
+            customClassNames={[classes.column, classes.padImage, classes.imageColumn].join(' ')}
           >
-            <ImageContainer />
+            <ImageContainer collage />
           </Column>
         </Row>
       </Column>

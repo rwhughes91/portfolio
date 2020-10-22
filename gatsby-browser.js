@@ -5,3 +5,5 @@ export const onClientEntry = () => {
     import(`intersection-observer`)
   }
 }
+
+export const shouldUpdateScroll = () => false

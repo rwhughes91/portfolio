@@ -7,7 +7,7 @@ interface Props {
 }
 
 const HeaderText: React.FC<Props> = ({ children }) => (
-  <Text size="large" bold customClassNames={classes.marginBottom}>
+  <Text size="xLarge" bold customClassNames={classes.marginBottom}>
     {children}
   </Text>
 )

@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 1250px;
+  max-width: 110rem;
   height: auto;
 }
 
@@ -14,12 +14,11 @@
 
 .cards {
   width: 100%;
-  max-width: 1200px;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media (min-width: 70em) {
+@media (min-width: 1120px) {
   .container {
     height: 100%;
   }

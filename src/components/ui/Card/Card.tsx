@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import classes from './Card.module.css'
 import ColorngCardImage from '@components/ui/images/colorng/ColorngCardImage'
 import DrugCurvesCardImage from '@components/ui/images/drugCurves/DrugCurvesCardImage'
@@ -15,7 +15,28 @@ interface Props {
   image: 'sdr' | 'ttlbl' | 'colorng' | 'drugCurves' | 'ljpc' | 'odt'
 }
 
-const Card: React.FC<Props> = ({ name, description, image }) => {
+const Card: React.FC<Props> = ({ description, image }) => {
+  const buttonElementRef = useRef<HTMLButtonElement | null>(null)
+
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    if (buttonElementRef.current) {
+      buttonElementRef.current.onfocus = () => {
+        setShow(true)
+      }
+      buttonElementRef.current.onblur = () => {
+        setShow(false)
+      }
+    }
+    return () => {
+      if (buttonElementRef.current) {
+        buttonElementRef.current.onfocus = null
+        buttonElementRef.current.onblur = null
+      }
+    }
+  }, [])
+
   let imageComponent = <TTLBLCardImage />
   if (image === 'sdr') {
     imageComponent = <SDRCardImage />
@@ -32,13 +53,16 @@ const Card: React.FC<Props> = ({ name, description, image }) => {
   if (image === 'odt') {
     imageComponent = <OdonateCardImage />
   }
+
   return (
     <figure className={classes.card}>
-      <figcaption className={classes.caption}>
-        <Text size="small" customClassNames={[classes.description, classes.text].join(' ')}>
+      <figcaption className={[classes.caption, show ? classes.show : null].join(' ')}>
+        <Text size="medium" customClassNames={[classes.description, classes.text].join(' ')}>
           {description}
         </Text>
-        <Button size="small">Learn More</Button>
+        <Button size="medium" customRef={buttonElementRef}>
+          Learn More
+        </Button>
       </figcaption>
       <div className={classes.imageContainer}>{imageComponent}</div>
     </figure>

@@ -5,11 +5,12 @@ interface Props {
   children: string
   styles?: React.CSSProperties
   bold?: boolean
-  size: 'small' | 'medium' | 'large' | 'xSmall'
+  size: 'small' | 'medium' | 'large' | 'xSmall' | 'xLarge'
   customClassNames?: string
+  customRef?: React.MutableRefObject<HTMLSpanElement | null>
 }
 
-const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames }) => {
+const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames, customRef }) => {
   const classNames = [classes.text, bold ? classes.bold : null, customClassNames]
   switch (size) {
     case 'xSmall':
@@ -20,9 +21,11 @@ const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames 
       classNames.push(classes.medium)
     case 'large':
       classNames.push(classes.large)
+    case 'xLarge':
+      classNames.push(classes.extraLarge)
   }
   return (
-    <span className={classNames.join(' ')} style={styles}>
+    <span className={classNames.join(' ')} style={styles} ref={customRef}>
       {children}
     </span>
   )

@@ -1,4 +1,17 @@
 .listItem {
   margin: 0;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listItem::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-blue-2);
+  margin-right: 0.5rem;
 }

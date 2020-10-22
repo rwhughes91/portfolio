@@ -1,9 +1,4 @@
 .marginBottom {
   margin-bottom: 5rem;
-}
-
-@media (min-width: 70em) {
-  .marginBottom {
-    margin-bottom: 0;
-  }
+  text-align: center;
 }
