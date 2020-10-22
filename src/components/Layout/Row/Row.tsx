@@ -5,11 +5,12 @@ interface Props {
   children: any
   styles?: React.CSSProperties
   customClassNames?: string
+  customRef?: React.MutableRefObject<HTMLDivElement | null>
 }
 
-const Row: React.FC<Props> = ({ styles, children, customClassNames }) => {
+const Row: React.FC<Props> = ({ styles, children, customClassNames, customRef }) => {
   return (
-    <div style={styles} className={[classes.row, customClassNames].join(' ')}>
+    <div style={styles} className={[classes.row, customClassNames].join(' ')} ref={customRef}>
       {children}
     </div>
   )

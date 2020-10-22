@@ -1,20 +1,22 @@
 import React from 'react'
-import { FiGithub } from 'react-icons/fi'
+import { FiX } from 'react-icons/fi'
 import classes from '../icons.module.css'
 
 interface Props {
   customClassNames?: string
   inverted?: boolean
+  onPress: () => void
 }
 
-const Github: React.FC<Props> = ({ customClassNames, inverted }) => {
+const Exit: React.FC<Props> = ({ customClassNames, inverted, onPress }) => {
   return (
     <button
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+      onClick={onPress}
     >
-      <FiGithub size={16} />
+      <FiX size={16} />
     </button>
   )
 }
 
-export default React.memo(Github)
+export default React.memo(Exit)

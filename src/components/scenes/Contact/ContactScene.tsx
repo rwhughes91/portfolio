@@ -10,7 +10,11 @@ import GithubIcon from '@components/ui/icons/Github/Github'
 import LinkedInIcon from '@components/ui/icons/LinkedIn/LinkedIn'
 import ResumeIcon from '@components/ui/icons/Resume/Resume'
 
-const ContactScene: React.FC = () => {
+interface Props {
+  customRef?: React.MutableRefObject<HTMLDivElement | null>
+}
+
+const ContactScene: React.FC<Props> = ({ customRef }) => {
   return (
     <div className={classes.container}>
       <Row customClassNames={classes.contactMe}>
@@ -27,7 +31,7 @@ const ContactScene: React.FC = () => {
           <Text size="small" styles={{ textAlign: 'center' }} customClassNames={classes.pad}>
             Learn something everyday, one day at a time.
           </Text>
-          <Row customClassNames={classes.icons}>
+          <Row customClassNames={classes.icons} customRef={customRef}>
             <ResumeIcon />
             <EmailIcon />
             <GithubIcon />

@@ -1,0 +1,31 @@
+.fixed {
+  width: auto;
+  position: fixed;
+  z-index: 99;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.iconContainer {
+  width: 100%;
+}
+
+.iconContainer button {
+  margin: 5px 0;
+}
+
+.margin {
+  margin: 5px 0;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .fixed {
+    right: 3rem;
+    bottom: 3rem;
+  }
+}

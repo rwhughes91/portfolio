@@ -4,11 +4,14 @@ import classes from '../icons.module.css'
 
 interface Props {
   customClassNames?: string
+  inverted?: boolean
 }
 
-const LinkedIn: React.FC<Props> = ({ customClassNames }) => {
+const LinkedIn: React.FC<Props> = ({ customClassNames, inverted }) => {
   return (
-    <button className={[classes.icon, customClassNames].join(' ')}>
+    <button
+      className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+    >
       <FaLinkedinIn size={16} />
     </button>
   )

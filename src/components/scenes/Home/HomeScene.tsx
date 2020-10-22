@@ -12,7 +12,10 @@ interface Props {
 
 const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
   return (
-    <Section styles={{ backgroundColor: 'var(--dark-blue-2)' }} fill>
+    <Section
+      styles={{ backgroundColor: 'var(--dark-blue-2)', position: 'relative', zIndex: 100 }}
+      fill
+    >
       <div className={classes.homeScene}>
         <Column customClassNames={classes.headers}>
           <Header>Hi, I'm Robbie Hughes.</Header>

@@ -1,7 +1,7 @@
 .icon {
   border-radius: 100%;
   outline: none;
-  background: none;
+  background-color: var(--light-gray-2);
   cursor: pointer;
   border: 1px solid var(--dark-blue-2);
   display: flex;
@@ -15,10 +15,36 @@
 
 .icon:hover,
 .icon:active {
-  color: white;
+  color: var(--light-gray-1);
   background-color: var(--dark-blue-2);
 }
 
 .icon:focus {
   box-shadow: 0 0 0 0.25rem rgba(19, 44, 68, 0.25);
+}
+
+.iconInverted {
+  background-color: var(--dark-blue-2);
+  color: var(--light-gray-1);
+}
+
+.iconInverted:hover {
+  background-color: var(--light-gray-2);
+  color: var(--dark-blue-2);
+}
+
+.blue {
+  background-color: var(--dark-blue-2);
+  color: var(--light-gray-1);
+  transition: transform 0.2s;
+}
+
+.blue:hover {
+  background-color: var(--dark-blue-2);
+  color: var(--light-gray-1);
+  transform: scale(1.05);
+}
+
+.blue:active {
+  transform: scale(1);
 }
