@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  max-width: 30rem;
+  max-width: 34rem;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
@@ -25,7 +25,7 @@
   background-color: var(--dark-blue-2);
 }
 
-.description {
+span.description {
   color: var(--light-gray-1);
   text-align: center;
   margin: auto 0;
@@ -51,7 +51,13 @@
   .caption {
     justify-content: flex-end;
   }
-  .description {
+  span.description {
     display: inline;
+  }
+}
+
+@media (min-width: 1800px) {
+  .card {
+    max-width: 30rem;
   }
 }

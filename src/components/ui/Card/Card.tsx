@@ -21,18 +21,19 @@ const Card: React.FC<Props> = ({ description, image }) => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    if (buttonElementRef.current) {
-      buttonElementRef.current.onfocus = () => {
+    const refReference = buttonElementRef.current
+    if (refReference) {
+      refReference.onfocus = () => {
         setShow(true)
       }
-      buttonElementRef.current.onblur = () => {
+      refReference.onblur = () => {
         setShow(false)
       }
     }
     return () => {
-      if (buttonElementRef.current) {
-        buttonElementRef.current.onfocus = null
-        buttonElementRef.current.onblur = null
+      if (refReference) {
+        refReference.onfocus = null
+        refReference.onblur = null
       }
     }
   }, [])
@@ -57,7 +58,7 @@ const Card: React.FC<Props> = ({ description, image }) => {
   return (
     <figure className={classes.card}>
       <figcaption className={[classes.caption, show ? classes.show : null].join(' ')}>
-        <Text size="medium" customClassNames={[classes.description, classes.text].join(' ')}>
+        <Text size="medium" customClassNames={classes.description}>
           {description}
         </Text>
         <Button size="medium" customRef={buttonElementRef}>

@@ -6,18 +6,29 @@ interface Props {
   children: string
   size: 'small' | 'medium' | 'large'
   customClassNames?: string
+  customButtonClassNames?: string
   customRef?: React.MutableRefObject<HTMLButtonElement | null>
-  onPress: () => void
+  onPress?: () => void
+  disabled?: boolean
 }
 
-const Button: React.FC<Props> = ({ customClassNames, size, children, customRef, onPress }) => {
+const Button: React.FC<Props> = ({
+  customClassNames,
+  size,
+  children,
+  customRef,
+  onPress,
+  customButtonClassNames,
+  disabled,
+}) => {
   return (
-    <button className={classes.button} ref={customRef} onClick={onPress}>
-      <Text
-        size={size}
-        customClassNames={customClassNames}
-        styles={{ color: 'var(--light-gray-1)', textAlign: 'center' }}
-      >
+    <button
+      className={[classes.button, customButtonClassNames].join(' ')}
+      ref={customRef}
+      onClick={onPress}
+      disabled={disabled}
+    >
+      <Text size={size} customClassNames={[classes.buttonText, customClassNames].join(' ')}>
         {children}
       </Text>
     </button>

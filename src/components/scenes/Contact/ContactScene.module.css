@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.column {
+div.column {
   justify-content: center;
   height: 100%;
   align-items: center;
@@ -19,26 +19,26 @@
   align-items: center;
 }
 
-.contactMeText {
+span.contactMeText {
   color: var(--light-gray-1);
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.pad {
+span.pad {
   padding: 0 1rem;
 }
 
-.contactMe {
+div.contactMe {
   background-color: var(--dark-blue-2);
   flex-direction: column;
   z-index: 10;
   position: relative;
-  top: 6rem;
+  top: 6.5rem;
   padding: 2rem 0;
 }
 
-.icons {
+div.icons {
   width: 100%;
   max-width: 20rem;
   min-width: 200px;
@@ -47,20 +47,26 @@
 }
 
 @media (min-width: 640px) {
-  .contactMe {
+  div.contactMe {
     justify-content: space-between;
     flex-direction: row;
     padding: 4rem 6rem;
     height: auto;
   }
-  .contactMeText {
+  span.contactMeText {
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 900px) {
-  .contactMe {
+  div.contactMe {
     border-radius: 10px;
     max-width: 90rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  div.contactMe {
+    top: 6.25rem;
   }
 }

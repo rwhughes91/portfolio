@@ -12,9 +12,10 @@ import ResumeIcon from '@components/ui/icons/Resume/Resume'
 
 interface Props {
   customRef?: React.MutableRefObject<HTMLDivElement | null>
+  onPress: () => void
 }
 
-const ContactScene: React.FC<Props> = ({ customRef }) => {
+const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
   return (
     <div className={classes.container}>
       <Row customClassNames={classes.contactMe}>
@@ -24,7 +25,9 @@ const ContactScene: React.FC<Props> = ({ customRef }) => {
         <Text size="medium" customClassNames={[classes.contactMeText, classes.pad].join(' ')}>
           Have a question or want to work together?
         </Text>
-        <Button size="medium">Reach out</Button>
+        <Button size="medium" onPress={onPress}>
+          Reach out
+        </Button>
       </Row>
       <div className={classes.content}>
         <Column customClassNames={classes.column}>

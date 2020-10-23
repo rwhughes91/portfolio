@@ -1,0 +1,13 @@
+.backDrop {
+  z-index: 99999;
+  position: fixed;
+  top: -20rem;
+  left: 0;
+  right: 0;
+  bottom: -20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}

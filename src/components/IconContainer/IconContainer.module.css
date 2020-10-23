@@ -1,4 +1,4 @@
-.fixed {
+div.fixed {
   width: auto;
   position: fixed;
   z-index: 99;
@@ -7,15 +7,16 @@
   padding: 0 1rem;
 }
 
-.iconContainer {
+div.iconContainer {
   width: 100%;
 }
 
-.iconContainer button {
+div.iconContainer button {
   margin: 5px 0;
+  background: var(--light-gray-1);
 }
 
-.margin {
+button.margin {
   margin: 5px 0;
 }
 
@@ -23,8 +24,37 @@
   display: none;
 }
 
+div.showArrow,
+button.showArrow {
+  transition: all 0.2s;
+  top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+div.hideArrow,
+button.hideArrow {
+  transition: all 0.2s;
+  position: relative;
+  top: 5rem;
+  z-index: 2;
+}
+
+button.showArrowIcon {
+  opacity: 1;
+}
+
+button.hideArrowIcon {
+  opacity: 0;
+}
+
+button.plus {
+  z-index: 2;
+  box-shadow: 0 0 0 0.15rem rgba(233, 236, 239, 0.25);
+}
+
 @media (min-width: 900px) {
-  .fixed {
+  div.fixed {
     right: 3rem;
     bottom: 3rem;
   }

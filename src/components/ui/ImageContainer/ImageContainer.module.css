@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.image {
+div.image {
   width: 100vw;
   max-width: 30rem;
   z-index: 0;
@@ -26,34 +26,34 @@
     height: 30rem;
   }
 
-  .imageContainerCollage:hover .image:not(:hover) {
+  .composition:hover div.image:not(:hover) {
     transform: scale(0.95);
   }
 
-  .imageCollage {
+  div.imageCollage {
     position: absolute;
   }
-  .imageCollage:hover {
+  div.imageCollage:hover {
     z-index: 10;
     transform: scale(1.05);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   }
-  .imageCollage.firstImage {
+  div.imageCollage.firstImage {
     top: 0;
     left: 0;
   }
-  .imageCollage.secondImage {
+  div.imageCollage.secondImage {
     top: 10%;
     right: 0;
   }
-  .imageCollage.thirdImage {
+  div.imageCollage.thirdImage {
     bottom: 0;
     right: 20%;
   }
 }
 
 @media (min-width: 1200px) {
-  .image {
+  div.image {
     max-width: 32.5rem;
   }
   .imageContainerCollage {
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: 1280px) {
-  .imageCollage {
+  div.imageCollage {
     max-width: 35rem;
   }
   .imageContainerCollage {
@@ -73,7 +73,7 @@
   .imageContainerCollage {
     height: 37.5rem;
   }
-  .imageCollage {
+  div.imageCollage {
     max-width: 37.5rem;
   }
 }
@@ -82,7 +82,7 @@
   .imageContainerCollage {
     height: 35rem;
   }
-  .imageCollage {
+  div.imageCollage {
     max-width: 35rem;
   }
 }

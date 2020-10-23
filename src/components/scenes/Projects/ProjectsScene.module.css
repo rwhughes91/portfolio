@@ -1,4 +1,4 @@
-.container {
+div.container {
   width: 100%;
   max-width: 110rem;
   height: auto;
@@ -12,14 +12,14 @@
   align-items: center;
 }
 
-.cards {
+div.cards {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 @media (min-width: 1120px) {
-  .container {
+  div.container {
     height: 100%;
   }
 }

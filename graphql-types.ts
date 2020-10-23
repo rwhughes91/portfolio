@@ -2714,6 +2714,11 @@ export type GetAboutUsDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetAboutUsDataQuery = { allDataJson: { nodes: Array<Pick<DataJson, 'introduction' | 'header' | 'body' | 'footer' | 'languages' | 'js' | 'server' | 'web' | 'databases' | 'tools'>> } };
 
+export type BackgroundQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BackgroundQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluid_WithWebpFragment> }> }> };
+
 export type CampingImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 

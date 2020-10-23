@@ -2,24 +2,29 @@ import React, { useRef, useCallback, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { debounce } from 'debounce'
-
 import HomeScene from '@components/scenes/Home/HomeScene'
 import AboutScene from '@components/scenes/About/AboutScene'
 import ProjectsScene from '@components/scenes/Projects/ProjectsScene'
 import ContactScene from '@components/scenes/Contact/ContactScene'
 import IconContainer from '@components/IconContainer/IconContainer'
+import ContactForm from '@components/ContactForm/ContactForm'
 
 import { GetMetadataQuery } from '../../graphql-types'
 
-const home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
+const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
   const aboutSectionRef = useRef<HTMLDivElement | null>(null)
   const iconRef = useRef<HTMLDivElement | null>(null)
   const [showArrowIcon, setShowArrowIcon] = useState(false)
+  const [showForm, setShowForm] = useState(false)
 
   const onScrollHandler = useCallback(() => {
     if (aboutSectionRef.current) {
       window.scrollTo(0, aboutSectionRef.current.offsetTop)
     }
+  }, [])
+
+  const toggleShowForm = useCallback(() => {
+    setShowForm(prevState => !prevState)
   }, [])
 
   useEffect(() => {
@@ -49,13 +54,14 @@ const home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
       <HomeScene onScrollHandler={onScrollHandler} />
       <AboutScene customRef={aboutSectionRef} />
       <ProjectsScene />
-      <ContactScene customRef={iconRef} />
+      <ContactScene customRef={iconRef} onPress={toggleShowForm} />
       <IconContainer arrow={showArrowIcon} onPress={onScrollHandler} />
+      <ContactForm onPress={toggleShowForm} show={showForm} />
     </>
   )
 }
 
-export default home
+export default Home
 
 export const query = graphql`
   query getMetadata {

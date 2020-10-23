@@ -1,0 +1,19 @@
+div.modal {
+  max-width: 50rem;
+}
+
+.thankYouContainer {
+  background-color: var(--light-gray-2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+span.margin {
+  margin-bottom: 3rem;
+  text-align: center;
+}

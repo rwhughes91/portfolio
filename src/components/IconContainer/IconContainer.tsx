@@ -16,34 +16,43 @@ interface Props {
 }
 
 const IconContainer: React.FC<Props> = ({ arrow, onPress }) => {
-  const [showIcons, setShowIcons] = useState(false)
+  const [showIcons, setShowIcons] = useState(true)
 
   const toggleIconsHandler = useCallback(() => {
     setShowIcons(prevState => !prevState)
   }, [])
 
   const iconBar = (
-    <AnimateHeight id="icons" duration={300} height={showIcons ? 'auto' : 0}>
-      <Column customClassNames={classes.iconContainer}>
-        <ResumeIcon customClassNames={classes.first} />
-        <EmailIcon customClassNames={classes.second} />
-        <GithubIcon customClassNames={classes.third} />
-        <LinkedInIcon customClassNames={classes.fourth} />
+    <AnimateHeight
+      id="icons"
+      duration={300}
+      height={showIcons ? 'auto' : 0}
+      className={arrow ? classes.showArrow : classes.hideArrow}
+    >
+      <Column customClassNames={[classes.iconContainer].join(' ')}>
+        <ResumeIcon />
+        <EmailIcon />
+        <GithubIcon />
+        <LinkedInIcon />
       </Column>
     </AnimateHeight>
   )
   return (
     <Column customClassNames={[classes.fixed].join(' ')}>
       {iconBar}
-      {arrow ? (
-        <ArrowUpIcon onPress={onPress} customClassNames={classes.margin} />
-      ) : (
-        <PlusIcon
-          onPress={toggleIconsHandler}
-          customClassNames={classes.margin}
-          type={showIcons ? 'exit' : 'plus'}
-        />
-      )}
+      <ArrowUpIcon
+        onPress={onPress}
+        customClassNames={[
+          classes.margin,
+          arrow ? classes.showArrow : classes.hideArrow,
+          arrow ? classes.showArrowIcon : classes.hideArrowIcon,
+        ].join(' ')}
+      />
+      <PlusIcon
+        onPress={toggleIconsHandler}
+        customClassNames={[classes.margin, classes.plus].join(' ')}
+        type={showIcons ? 'exit' : 'plus'}
+      />
     </Column>
   )
 }

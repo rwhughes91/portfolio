@@ -17,10 +17,15 @@
 .icon:active {
   color: var(--light-gray-1);
   background-color: var(--dark-blue-2);
+  transform: scale(1.05);
+}
+
+.icon:active {
+  transform: scale(1);
 }
 
 .icon:focus {
-  box-shadow: 0 0 0 0.25rem rgba(19, 44, 68, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(19, 44, 68, 0.25);
 }
 
 .iconInverted {
@@ -36,15 +41,36 @@
 .blue {
   background-color: var(--dark-blue-2);
   color: var(--light-gray-1);
-  transition: transform 0.2s;
 }
 
 .blue:hover {
   background-color: var(--dark-blue-2);
   color: var(--light-gray-1);
+}
+
+.contactIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  color: var(--purple);
+  outline: none;
+  cursor: pointer;
+  padding: 1.25rem;
+  background: none;
+  transition: all 0.2s;
+}
+
+.contactIcon:hover {
   transform: scale(1.05);
 }
 
-.blue:active {
+.contactIcon:active {
   transform: scale(1);
+}
+
+.contactIcon:focus {
+  box-shadow: 0 0 0 0.1rem rgba(19, 44, 68, 0.25);
 }
