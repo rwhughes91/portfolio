@@ -55,7 +55,7 @@
   align-items: center;
   border: none;
   border-radius: 4px;
-  color: var(--purple);
+  color: var(--dark-blue-2);
   outline: none;
   cursor: pointer;
   padding: 1.25rem;
@@ -63,12 +63,10 @@
   transition: all 0.2s;
 }
 
-.contactIcon:hover {
-  transform: scale(1.05);
-}
-
-.contactIcon:active {
-  transform: scale(1);
+.contactIcon:hover,
+.contactIcon:active,
+.contactIcon:focus {
+  color: var(--purple);
 }
 
 .contactIcon:focus {

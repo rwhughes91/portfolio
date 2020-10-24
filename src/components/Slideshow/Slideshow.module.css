@@ -1,0 +1,16 @@
+.slideShow {
+  width: 100%;
+  display: none;
+}
+
+.showItem {
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 600px) and (min-height: 700px) {
+  .slideShow,
+  .showItem {
+    display: block;
+  }
+}

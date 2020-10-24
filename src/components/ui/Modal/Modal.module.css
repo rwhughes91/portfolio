@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 110rem;
   position: relative;
+  box-shadow: var(--box-shadow);
 }
 
 .enter {

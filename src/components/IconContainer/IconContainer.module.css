@@ -42,6 +42,7 @@ button.hideArrow {
 
 button.showArrowIcon {
   opacity: 1;
+  background: var(--light-gray-1);
 }
 
 button.hideArrowIcon {
@@ -50,7 +51,7 @@ button.hideArrowIcon {
 
 button.plus {
   z-index: 2;
-  box-shadow: 0 0 0 0.15rem rgba(233, 236, 239, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(233, 236, 239, 0.25) !important;
 }
 
 @media (min-width: 900px) {

@@ -1,0 +1,15 @@
+button.control-next,
+button.control-prev {
+  background-color: var(--dark-blue-2) !important;
+  height: 60px !important;
+  width: 60px !important;
+  padding: 0 !important;
+  top: initial !important;
+}
+button.control-next {
+  border-top-left-radius: 3px;
+}
+
+button.control-prev {
+  border-top-right-radius: 3px;
+}

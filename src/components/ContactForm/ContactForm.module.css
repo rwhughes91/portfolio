@@ -94,12 +94,28 @@ div.row {
   justify-content: space-between;
 }
 
+.iconContainer {
+  display: none;
+}
+
 @media (min-width: 500px) {
   div.row {
     flex-direction: row;
   }
   div.formFieldContainer {
     width: 48%;
+  }
+}
+
+@media (min-width: 850px) {
+  .iconContainer {
+    display: block;
+  }
+  div.formFieldContainer {
+    margin-bottom: 3rem;
+  }
+  .input {
+    padding: 1rem;
   }
 }
 
@@ -111,7 +127,7 @@ div.row {
   }
 }
 
-@media (min-height: 400px) {
+@media (min-height: 425px) {
   .input {
     padding: 1rem;
   }

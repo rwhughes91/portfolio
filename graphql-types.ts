@@ -2764,6 +2764,26 @@ export type TtlblCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>
 
 export type TtlblCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
+export type TtlblDashboardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TtlblDashboardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type TtlblDetailImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TtlblDetailImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type TtlblReportsImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TtlblReportsImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type TtlblSearchImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TtlblSearchImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type GetMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 

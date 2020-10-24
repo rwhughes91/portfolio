@@ -1,6 +1,7 @@
 button.submitButton {
   padding: 0.5rem 3rem;
   margin-top: 0.5rem;
+  background-color: var(--light-gray-2);
 }
 
 button.submitButton:focus {

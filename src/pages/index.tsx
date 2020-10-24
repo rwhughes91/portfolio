@@ -9,6 +9,8 @@ import ContactScene from '@components/scenes/Contact/ContactScene'
 import IconContainer from '@components/IconContainer/IconContainer'
 import ContactForm from '@components/ContactForm/ContactForm'
 
+import favicon from '@images/favicon.png'
+
 import { GetMetadataQuery } from '../../graphql-types'
 
 const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
@@ -50,6 +52,7 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
         {data.site?.siteMetadata?.link && (
           <link rel="canonical" href={data.site?.siteMetadata?.link} />
         )}
+        <link rel="icon" href={favicon} />
       </Helmet>
       <HomeScene onScrollHandler={onScrollHandler} />
       <AboutScene customRef={aboutSectionRef} />

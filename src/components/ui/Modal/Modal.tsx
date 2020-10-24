@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import classes from './Modal.module.css'
 import Backdrop from '@components/ui/Backdrop/Backdrop'
 import { CSSTransition } from 'react-transition-group'
@@ -18,6 +18,10 @@ const Modal: React.FC<Props> = ({
   customClassNames,
   customBackdropClassNames,
 }) => {
+  const stopPropagationHandler = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation()
+  }, [])
+
   return (
     <CSSTransition
       in={show}
@@ -31,7 +35,12 @@ const Modal: React.FC<Props> = ({
       }}
     >
       <Backdrop onPress={onPress} customClassNames={customBackdropClassNames}>
-        <div className={[classes.modal, customClassNames].join(' ')}>{children}</div>
+        <div
+          className={[classes.modal, customClassNames].join(' ')}
+          onClick={stopPropagationHandler}
+        >
+          {children}
+        </div>
       </Backdrop>
     </CSSTransition>
   )

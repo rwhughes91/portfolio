@@ -17,7 +17,12 @@ const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
   const bgImage = data.file.childImageSharp.fluid
 
   return (
-    <BackgroundImage Tag="section" fluid={bgImage} backgroundColor="var(--dark-blue-2)" style={{zIndex: 100}}>
+    <BackgroundImage
+      Tag="section"
+      fluid={bgImage}
+      backgroundColor="var(--dark-blue-2)"
+      style={{ zIndex: 100 }}
+    >
       <Section
         styles={{ backgroundColor: 'rgba(19, 44, 68, .50)', position: 'relative', zIndex: 101 }}
         fill
@@ -27,7 +32,7 @@ const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
             <Header>Hi, I&apos;m Robbie Hughes.</Header>
             <Header>I&apos;m a full-stack web developer.</Header>
             <div className={classes.button}>
-              <Button size="large" onPress={onScrollHandler}>
+              <Button size="medium" onPress={onScrollHandler}>
                 View my work
               </Button>
             </div>

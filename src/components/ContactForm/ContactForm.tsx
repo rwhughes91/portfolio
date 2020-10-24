@@ -87,9 +87,6 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
     }
   }, [errorFlash])
 
-  const disabled =
-    formState.name.length === 0 && formState.email.length === 0 && formState.message.length === 0
-
   return (
     <>
       <CSSTransition
@@ -194,14 +191,14 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
                 {loading ? (
                   <Loader customClassNames={classes.loader} />
                 ) : (
-                  <SubmitButton customButtonClassNames={classes.submitButton} disabled={disabled}>
-                    Submit
-                  </SubmitButton>
+                  <SubmitButton customButtonClassNames={classes.submitButton}>Submit</SubmitButton>
                 )}
               </Column>
             </div>
           </form>
-          <IconContainer />
+          <div className={classes.iconContainer}>
+            <IconContainer />
+          </div>
         </Section>
       </CSSTransition>
       <ThankYouModal show={showModal && show} onPress={onModalPress} />

@@ -30,7 +30,7 @@ span.buttonText {
   text-align: center;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 900px) {
   .button {
     padding: 0.75rem 2.5rem;
   }

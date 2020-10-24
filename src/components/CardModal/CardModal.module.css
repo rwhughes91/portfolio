@@ -1,0 +1,92 @@
+div.modal {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.cardModal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.content {
+  border-top: 1px solid var(--dark-blue-2);
+  padding: 2rem;
+  padding-bottom: 3rem;
+  background-color: var(--light-gray-2);
+  align-items: center;
+}
+
+div.header {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(19, 44, 68, 0.1);
+}
+
+span.margin {
+  margin-top: 1rem;
+}
+
+span.techHeader {
+  color: var(--purple);
+}
+
+span.button {
+  color: var(--purple);
+}
+button:hover span.button {
+  color: var(--light-gray-2);
+}
+
+button.headerButton {
+  display: none;
+}
+
+button.secondaryButton {
+  margin-top: 1rem;
+}
+
+.auth {
+  margin-top: 1rem;
+}
+
+span.authText {
+  color: crimson;
+}
+
+span.center {
+  text-align: center;
+}
+
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  button.headerButton {
+    display: block;
+  }
+  button.secondaryButton {
+    display: none;
+  }
+  span.center {
+    text-align: left;
+  }
+  div.content {
+    align-items: flex-start;
+  }
+  div.header {
+    justify-content: space-between;
+  }
+  .centerContainer {
+    display: block;
+  }
+}
