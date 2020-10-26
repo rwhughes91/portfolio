@@ -6,24 +6,33 @@ button.submitButton {
 
 button.submitButton:focus {
   box-shadow: var(--buttonBoxButtonPurple);
+  outline: none;
+}
+
+button.submitButton:focus span.submitButtonText {
+  animation: color 1s;
 }
 
 button.submitButton span.submitButtonText {
   color: var(--purple);
 }
 
-button.submitButton:hover span.submitButtonText {
+button.submitButton:hover span.submitButtonText,
+button.submitButton:active span.submitButtonText {
   color: var(--light-gray-1);
-}
-
-@media (min-width: 1800px) {
-  button.submitButton {
-    padding: 0.75rem 5rem;
-  }
 }
 
 @media (min-height: 400px) {
   button.submitButton {
-    padding: 1rem 5rem;
+    padding: 0.5em 2.5em;
+  }
+}
+
+@keyframes color {
+  from {
+    color: var(--light-gray-1);
+  }
+  to {
+    color: var(--purple);
   }
 }

@@ -19,7 +19,7 @@ const ThankYouModal: React.FC<Props> = ({ show, onPress }) => {
         <Text size="medium" customClassNames={classes.margin}>
           Expect a response within 24 hours
         </Text>
-        <SubmitButton>Return</SubmitButton>
+        <SubmitButton onPress={onPress}>Return</SubmitButton>
       </div>
     </Modal>
   )

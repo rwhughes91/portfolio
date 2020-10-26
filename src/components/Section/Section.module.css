@@ -9,7 +9,8 @@
 }
 
 .fill {
-  height: max(100vh, 75rem);
+  height: 100vh;
+  min-height: 75rem;
 }
 
 .pad {

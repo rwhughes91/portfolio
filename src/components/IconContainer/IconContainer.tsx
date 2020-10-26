@@ -13,9 +13,10 @@ import ArrowUpIcon from '@components/ui/icons/ArrowUp/ArrowUp'
 interface Props {
   arrow?: boolean
   onPress?: () => void
+  hide?: boolean
 }
 
-const IconContainer: React.FC<Props> = ({ arrow, onPress }) => {
+const IconContainer: React.FC<Props> = ({ arrow, onPress, hide }) => {
   const [showIcons, setShowIcons] = useState(true)
 
   const toggleIconsHandler = useCallback(() => {
@@ -38,7 +39,7 @@ const IconContainer: React.FC<Props> = ({ arrow, onPress }) => {
     </AnimateHeight>
   )
   return (
-    <Column customClassNames={[classes.fixed].join(' ')}>
+    <Column customClassNames={[classes.fixed, hide ? classes.main : null].join(' ')}>
       {iconBar}
       <ArrowUpIcon
         onPress={onPress}

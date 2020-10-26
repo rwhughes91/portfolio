@@ -1,33 +1,57 @@
-import React from 'react'
-import { Carousel } from 'react-responsive-carousel'
+import React, { useCallback, useState } from 'react'
 import classes from './Slideshow.module.css'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import './Slideshow.css'
 
 interface Props {
   children: JSX.Element[]
 }
 
 const Slideshow: React.FC<Props> = ({ children }) => {
+  const width = children.length * 100
+  const [transform, setTransform] = useState(0)
+
+  const onClickHandler = useCallback(
+    (direction: 'next' | 'prev') => {
+      if (direction === 'next') {
+        setTransform(prevState => {
+          return prevState - 100 / children.length
+        })
+      } else {
+        setTransform(prevState => {
+          return prevState + 100 / children.length
+        })
+      }
+    },
+    [children.length]
+  )
+
+  const factor = 100 / children.length
+  const slideNumber = Math.floor(Math.abs(transform) / factor)
+
   return (
-    <Carousel
-      className={classes.slideShow}
-      showStatus={false}
-      showThumbs={false}
-      showIndicators={false}
-      infiniteLoop={true}
-      emulateTouch
-      swipeable
-      useKeyboardArrows
-    >
-      {children.map((component, index) => {
-        return (
+    <div className={classes.slideShow}>
+      {slideNumber > 0 && (
+        <button
+          className={[classes.iconLeft, classes.icon].join(' ')}
+          onClick={() => onClickHandler('prev')}
+        />
+      )}
+      {slideNumber < children.length - 1 && (
+        <button
+          className={[classes.iconRight, classes.icon].join(' ')}
+          onClick={() => onClickHandler('next')}
+        />
+      )}
+      <div
+        className={classes.carousel}
+        style={{ width: `${width}%`, transform: `translateX(${transform}%)` }}
+      >
+        {children.map((child, index) => (
           <div className={classes.showItem} key={index}>
-            {component}
+            {child}
           </div>
-        )
-      })}
-    </Carousel>
+        ))}
+      </div>
+    </div>
   )
 }
 

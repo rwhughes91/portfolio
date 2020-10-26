@@ -20,6 +20,11 @@
 
 body {
   box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -27,6 +32,10 @@ html {
   background-color: var(--light-gray-1);
   scroll-behavior: smooth;
   line-height: 1.6;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 @media (max-width: 900px) {

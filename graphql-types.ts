@@ -2754,10 +2754,45 @@ export type OdonateCardImageQueryQueryVariables = Exact<{ [key: string]: never; 
 
 export type OdonateCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
+export type SdrAdminImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrAdminImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrArtistsImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrArtistsImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type SdrCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type SdrCardImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrCheckoutImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrCheckoutImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrEventsImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrEventsImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrHomeImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrHomeImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrNewsImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrNewsImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type SdrShopImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SdrShopImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
 export type TtlblCardImageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 

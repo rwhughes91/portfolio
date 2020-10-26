@@ -40,8 +40,19 @@ span.techHeader {
 span.button {
   color: var(--purple);
 }
-button:hover span.button {
+
+button.buttonContainer:hover span.button,
+button.buttonContainer:active span.button {
   color: var(--light-gray-2);
+}
+
+button.buttonContainer:focus {
+  box-shadow: var(--buttonBoxButtonPurple);
+  outline: none;
+}
+
+button.buttonContainer:focus span.button {
+  animation: color 1s;
 }
 
 button.headerButton {
@@ -88,5 +99,14 @@ span.center {
   }
   .centerContainer {
     display: block;
+  }
+}
+
+@keyframes color {
+  from {
+    color: var(--light-gray-1);
+  }
+  to {
+    color: var(--purple);
   }
 }

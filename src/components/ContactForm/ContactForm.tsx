@@ -11,7 +11,7 @@ import ArrowLeftIcon from '@components/ui/icons/ArrowLeft/ArrowLeft'
 import RefreshIcon from '@components/ui/icons/Refresh/Refresh'
 import IconContainer from '@components/IconContainer/IconContainer'
 import { initialState, reducer } from './reducer'
-import ThankYouModal from '@components/ThankYouModal/ThankYouModal'
+import ThankYouModal from '@components/modals/ThankYouModal/ThankYouModal'
 import Loader from '@components/ui/Loader/Loader'
 import FlashMessage from '@components/ui/FlashMessage/FlashMessage'
 

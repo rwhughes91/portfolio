@@ -25,7 +25,12 @@
 }
 
 .icon:focus {
+  outline: none;
   box-shadow: 0 0 0 0.15rem rgba(19, 44, 68, 0.25);
+}
+
+.icon::-moz-focus-inner {
+  border: 0;
 }
 
 .iconInverted {
@@ -53,22 +58,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 1px solid var(--light-gray-2);
   border-radius: 4px;
   color: var(--dark-blue-2);
   outline: none;
   cursor: pointer;
-  padding: 1.25rem;
   background: none;
   transition: all 0.2s;
+  height: 5rem;
+  width: 5rem;
 }
 
 .contactIcon:hover,
 .contactIcon:active,
 .contactIcon:focus {
   color: var(--purple);
+  outline: none;
 }
 
-.contactIcon:focus {
-  box-shadow: 0 0 0 0.1rem rgba(19, 44, 68, 0.25);
+.contactIcon:focus,
+.contactIcon:active {
+  border: 1px solid rgba(19, 44, 68, 0.25);
+  outline: none;
+}
+
+.contactIcon::-moz-focus-inner {
+  border: 0;
 }

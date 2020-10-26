@@ -5,7 +5,7 @@ interface Props {
   children: string
   styles?: React.CSSProperties
   bold?: boolean
-  size: 'small' | 'medium' | 'large' | 'xSmall' | 'xLarge'
+  size: 'small' | 'medium' | 'large' | 'xSmall' | 'xLarge' | 'header'
   customClassNames?: string
   customRef?: React.MutableRefObject<HTMLSpanElement | null>
 }
@@ -27,6 +27,9 @@ const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames,
       break
     case 'xLarge':
       classNames.push(classes.extraLarge)
+      break
+    case 'header':
+      classNames.push(classes.header)
       break
   }
   return (

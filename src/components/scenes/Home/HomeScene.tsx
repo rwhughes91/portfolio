@@ -32,7 +32,7 @@ const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
             <Header>Hi, I&apos;m Robbie Hughes.</Header>
             <Header>I&apos;m a full-stack web developer.</Header>
             <div className={classes.button}>
-              <Button size="medium" onPress={onScrollHandler}>
+              <Button size="header" onPress={onScrollHandler}>
                 View my work
               </Button>
             </div>

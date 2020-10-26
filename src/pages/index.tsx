@@ -17,11 +17,12 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
   const aboutSectionRef = useRef<HTMLDivElement | null>(null)
   const iconRef = useRef<HTMLDivElement | null>(null)
   const [showArrowIcon, setShowArrowIcon] = useState(false)
+  const [showIcons, setShowIcons] = useState(false)
   const [showForm, setShowForm] = useState(false)
 
   const onScrollHandler = useCallback(() => {
     if (aboutSectionRef.current) {
-      window.scrollTo(0, aboutSectionRef.current.offsetTop)
+      window.scrollTo({ left: 0, top: aboutSectionRef.current.offsetTop, behavior: 'smooth' })
     }
   }, [])
 
@@ -35,6 +36,11 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
         setShowArrowIcon(true)
       } else {
         setShowArrowIcon(false)
+      }
+      if (aboutSectionRef.current && window.pageYOffset >= aboutSectionRef.current.offsetTop / 2.5) {
+        setShowIcons(true)
+      } else {
+        setShowIcons(false)
       }
     }, 200)
     window.onscroll = onScrollWindowHandler
@@ -58,7 +64,7 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
       <AboutScene customRef={aboutSectionRef} />
       <ProjectsScene />
       <ContactScene customRef={iconRef} onPress={toggleShowForm} />
-      <IconContainer arrow={showArrowIcon} onPress={onScrollHandler} />
+      <IconContainer arrow={showArrowIcon} onPress={onScrollHandler} hide={!showIcons} />
       <ContactForm onPress={toggleShowForm} show={showForm} />
     </>
   )

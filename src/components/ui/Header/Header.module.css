@@ -20,6 +20,12 @@
 
 @media (min-width: 900px) {
   .header {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .header {
     font-size: 4rem;
   }
 }

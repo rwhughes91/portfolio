@@ -1,7 +1,7 @@
 .button {
   border: 2px solid var(--purple);
   color: var(--light-gray-1);
-  padding: 1rem 2.5rem;
+  padding: 0.5em 1.5em;
   cursor: pointer;
   border-radius: 200px;
   transition: all 0.2s;
@@ -22,7 +22,12 @@
 
 .button:focus {
   box-shadow: var(--buttonBoxButtonPurple);
+  outline: none;
   animation: backgroundAnim 1s;
+}
+
+.button::-moz-focus-inner {
+  border: 0;
 }
 
 span.buttonText {
@@ -30,9 +35,31 @@ span.buttonText {
   text-align: center;
 }
 
-@media (min-width: 900px) {
-  .button {
-    padding: 0.75rem 2.5rem;
+.header {
+  font-size: 1.8rem;
+}
+.large {
+  font-size: 2.2rem;
+}
+.medium {
+  font-size: 1.8rem;
+}
+.small {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 1800px) {
+  .header {
+    font-size: 1.8rem;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .medium {
+    font-size: 1.6rem;
+  }
+  .small {
+    font-size: 1.4rem;
   }
 }
 

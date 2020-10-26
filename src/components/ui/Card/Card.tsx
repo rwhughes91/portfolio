@@ -9,7 +9,8 @@ import OdonateCardImage from '@components/ui/images/odonate/OdonateCardImage'
 import Text from '@components/ui/Text/Text'
 import Button from '@components/ui/Button/Button'
 
-import TTLBLModal from '@components/modals/TTLBLModal'
+import TTLBLModal from '@components/modals/TTLBLModal/TTLBLModal'
+import SDRModal from '@components/modals/SDRModal/SDRModal'
 
 interface Props {
   name: string
@@ -51,9 +52,21 @@ const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescr
 
   let imageComponent = null
   let modal = null
+
+  const modalConfig = {
+    show: showModal,
+    onPress: toggleModalHandler,
+    url,
+    name,
+    description,
+    tech,
+    auth,
+  }
+
   switch (image) {
     case 'sdr':
       imageComponent = <SDRCardImage />
+      modal = <SDRModal {...modalConfig} />
       break
     case 'colorng':
       imageComponent = <ColorngCardImage />
@@ -69,17 +82,7 @@ const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescr
       break
     default:
       imageComponent = <TTLBLCardImage />
-      modal = (
-        <TTLBLModal
-          show={showModal}
-          onPress={toggleModalHandler}
-          url={url}
-          name={name}
-          description={description}
-          tech={tech}
-          auth={auth}
-        />
-      )
+      modal = <TTLBLModal {...modalConfig} />
   }
 
   return (

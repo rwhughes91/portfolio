@@ -20,14 +20,15 @@ const ProjectsScene: React.FC = () => {
               description="A web app/accounting tool for acquired tax liens in the state of New Jersey. We used this tool for both accounting and financial analysis."
               tech="React, Apollo Server (graphql), Mongodb, Redux, Redux-Saga, Socket.io, Sendgrid/Twilio, AWS S3, Jest, Heroku."
               auth={true}
-              url=""
+              url="https://new-jersey-database.herokuapp.com/"
             />
             <Card
               image="sdr"
               name="Super Delicious Records"
-              description="A record label e-commerce web application."
               shortDescription="A record label e-commerce web application."
-              url=""
+              description="A record label e-commerce web application that primarily manages metal, punk, and hard rock bands."
+              tech="React, Next.js, Apollo Micro Server (graphql), Firebase, Stripe, Sendgrid/Twilio, AWS S3, AWS Cloudfront, Jest, Vercel"
+              url="https://super-delicious-records-nvn09ff67.vercel.app/"
             />
             <Card
               image="colorng"

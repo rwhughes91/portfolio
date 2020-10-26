@@ -5,7 +5,9 @@
 .bold {
   font-weight: 600;
 }
-
+.header {
+  font-size: 1.8rem;
+}
 .extraLarge {
   font-size: 2.4rem;
 }
@@ -22,7 +24,16 @@
   font-size: 1.4rem;
 }
 
+@media (min-width: 592px) {
+  .header {
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 1800px) {
+  .header {
+    font-size: 1.8rem;
+  }
   .extraLarge {
     font-size: 2.2rem;
   }

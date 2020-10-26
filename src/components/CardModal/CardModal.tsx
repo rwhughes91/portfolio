@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Modal from '@components/ui/Modal/Modal'
 import SlideShow from '@components/Slideshow/Slideshow'
 import classes from './CardModal.module.css'
@@ -28,6 +28,10 @@ const CardModal: React.FC<Props> = ({
   tech,
   auth,
 }) => {
+  const onPressHandler = useCallback(() => {
+    window.open(url, '_blank')
+  }, [url])
+
   return (
     <Modal show={show} onPress={onPress} customClassNames={classes.modal}>
       <div className={classes.cardModal}>
@@ -40,9 +44,10 @@ const CardModal: React.FC<Props> = ({
             <Button
               size="small"
               customClassNames={classes.button}
-              customButtonClassNames={classes.headerButton}
+              customButtonClassNames={[classes.buttonContainer, classes.headerButton].join(' ')}
+              onPress={onPressHandler}
             >
-              Visit site
+              Go to site
             </Button>
           </Row>
           <Text size="medium" customClassNames={classes.center}>
@@ -60,21 +65,21 @@ const CardModal: React.FC<Props> = ({
           )}
           {auth && (
             <div className={[classes.auth, classes.centerContainer].join(' ')}>
-              <Text size="small" customClassNames={[classes.authText, classes.center].join(' ')}>
+              <Text size="medium" customClassNames={[classes.authText, classes.center].join(' ')}>
                 Authentication is required to use app.
               </Text>
-              <Text size="small" customClassNames={classes.center}>
-                {' '}
-                Please contact me if you wish to see a demo.
+              <Text size="medium" customClassNames={classes.center}>
+                {' Please contact me if you wish to see a demo.'}
               </Text>
             </div>
           )}
           <Button
-            size="small"
+            size="medium"
             customClassNames={classes.button}
-            customButtonClassNames={classes.secondaryButton}
+            customButtonClassNames={[classes.buttonContainer, classes.secondaryButton].join(' ')}
+            onPress={onPressHandler}
           >
-            Visit site
+            Go to site
           </Button>
         </Column>
       </div>

@@ -7,6 +7,12 @@ module.exports = {
     link: 'http://mysite.com/example"',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
     'gatsby-plugin-graphql-codegen',
     'gatsby-transformer-sharp',
     {

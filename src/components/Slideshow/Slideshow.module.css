@@ -1,11 +1,71 @@
 .slideShow {
   width: 100%;
   display: none;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-color: var(--dark-blue-2);
+  width: 65px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.4s;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.icon:before {
+  display: inline;
+  font-size: 36px;
+  color: var(--light-gray-2);
+}
+
+.iconLeft {
+  left: 0;
+  border-radius: 0;
+  border-top-right-radius: 3px;
+}
+
+.iconRight {
+  right: 0;
+  border-radius: 0;
+  border-top-left-radius: 3px;
+}
+
+.iconRight:before {
+  content: '\003E';
+}
+
+.iconLeft:before {
+  content: '\003C';
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: transform 0.5s ease-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .showItem {
   width: 100%;
-  display: none;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 @media (min-width: 600px) and (min-height: 700px) {
