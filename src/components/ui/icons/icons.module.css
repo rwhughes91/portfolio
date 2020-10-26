@@ -95,6 +95,7 @@
   margin: 0.5rem;
   margin-top: 0;
   background: none;
+  transition: none;
 }
 
 .pdfIcon:hover {
@@ -104,6 +105,7 @@
 
 .pdfIcon:hover span.header {
   color: var(--light-gray-2);
+  transition: none;
 }
 
 @media (min-width: 1800px) {
