@@ -132,7 +132,7 @@ div.row {
     padding: 1rem;
   }
   .textArea {
-    min-height: 5rem;
+    min-height: 10rem;
   }
   .form {
     margin-top: 0;

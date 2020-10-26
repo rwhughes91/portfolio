@@ -9,11 +9,14 @@ interface Props {
 
 const LinkedIn: React.FC<Props> = ({ customClassNames, inverted }) => {
   return (
-    <button
+    <a
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+      href="https://www.linkedin.com/in/robert-hughes-9050ab100/"
+      target="_blank"
+      rel="noreferrer"
     >
       <FaLinkedinIn size={16} />
-    </button>
+    </a>
   )
 }
 

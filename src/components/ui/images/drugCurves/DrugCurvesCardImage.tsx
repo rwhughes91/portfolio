@@ -15,6 +15,7 @@ const DrugCurvesCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
       <Img
         fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }}
         alt="Drug Curves Card"
+        draggable={false}
       />
     </div>
   )

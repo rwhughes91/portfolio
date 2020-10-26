@@ -11,6 +11,7 @@ div.fixed {
 div.fixed.main {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translateX(4rem);
 }
 
@@ -18,7 +19,8 @@ div.iconContainer {
   width: 100%;
 }
 
-div.iconContainer button {
+div.iconContainer button,
+div.iconContainer a {
   margin: 5px 0;
   background: var(--light-gray-1);
 }
@@ -65,5 +67,14 @@ button.plus {
   div.fixed {
     right: 3rem;
     bottom: 3rem;
+  }
+}
+
+@media (max-height: 350px) {
+  div.fixed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(4rem);
   }
 }

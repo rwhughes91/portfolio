@@ -9,11 +9,12 @@ interface Props {
 
 const Email: React.FC<Props> = ({ customClassNames, inverted }) => {
   return (
-    <button
+    <a
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+      href="mailto: rwhughes91@google.com"
     >
       <FiMail size={16} />
-    </button>
+    </a>
   )
 }
 

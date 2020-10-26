@@ -12,7 +12,11 @@ const CampingImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={data.file.childImageSharp.fluid} alt="Camping Image of Emelia and Marlow" />
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Camping Image of Emelia and Marlow"
+        draggable={false}
+      />
     </div>
   )
 }

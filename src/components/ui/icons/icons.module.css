@@ -1,6 +1,7 @@
 .icon {
   border-radius: 100%;
   outline: none;
+  background: none;
   background-color: var(--light-gray-2);
   cursor: pointer;
   border: 1px solid var(--dark-blue-2);
@@ -84,4 +85,29 @@
 
 .contactIcon::-moz-focus-inner {
   border: 0;
+}
+
+.pdfIcon {
+  color: var(--purple);
+  border-radius: 3px;
+  width: 12rem;
+  white-space: nowrap;
+  margin: 0.5rem;
+  margin-top: 0;
+  background: none;
+}
+
+.pdfIcon:hover {
+  transform: none;
+  color: var(--light-gray-2);
+}
+
+.pdfIcon:hover span.header {
+  color: var(--light-gray-2);
+}
+
+@media (min-width: 1800px) {
+  .pdfIcon {
+    width: 11rem;
+  }
 }

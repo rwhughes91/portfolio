@@ -12,7 +12,11 @@ const ColorngCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }} alt="Colorng Card" />
+      <Img
+        fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }}
+        alt="Colorng Card"
+        draggable={false}
+      />
     </div>
   )
 }

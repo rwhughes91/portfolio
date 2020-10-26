@@ -13,9 +13,7 @@ div.modal {
 }
 
 div.content {
-  border-top: 1px solid var(--dark-blue-2);
-  padding: 2rem;
-  padding-bottom: 3rem;
+  padding: 1rem 2rem;
   background-color: var(--light-gray-2);
   align-items: center;
 }
@@ -99,6 +97,13 @@ span.center {
   }
   .centerContainer {
     display: block;
+  }
+}
+
+@media (min-height: 850px) {
+  div.content {
+    padding: 2rem;
+    padding-bottom: 3rem;
   }
 }
 

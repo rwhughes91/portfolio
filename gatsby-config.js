@@ -49,6 +49,7 @@ module.exports = {
           '@pages': 'src/pages',
           '@utils': 'src/utils',
           '@types': 'src/types',
+          '@pdfs': 'src/pdfs',
         },
       },
       extensions: ['js', 'ts', 'tsx'],

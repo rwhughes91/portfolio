@@ -12,7 +12,11 @@ const TTLBLSearchImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={{ ...data.file.childImageSharp.fluid }} alt="New Jersey Database Search Page" />
+      <Img
+        fluid={{ ...data.file.childImageSharp.fluid }}
+        alt="New Jersey Database Search Page"
+        draggable={false}
+      />
     </div>
   )
 }

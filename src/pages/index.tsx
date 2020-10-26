@@ -37,7 +37,10 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
       } else {
         setShowArrowIcon(false)
       }
-      if (aboutSectionRef.current && window.pageYOffset >= aboutSectionRef.current.offsetTop / 2.5) {
+      if (
+        aboutSectionRef.current &&
+        window.pageYOffset >= aboutSectionRef.current.offsetTop / 2.5
+      ) {
         setShowIcons(true)
       } else {
         setShowIcons(false)

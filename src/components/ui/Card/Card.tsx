@@ -11,6 +11,10 @@ import Button from '@components/ui/Button/Button'
 
 import TTLBLModal from '@components/modals/TTLBLModal/TTLBLModal'
 import SDRModal from '@components/modals/SDRModal/SDRModal'
+import ColorngModal from '@components/modals/ColorngModal/ColorngModal'
+import ODTModal from '@components/modals/ODTModal/ODTModal'
+import LJPCModal from '@components/modals/LJPCModal/LJPCModal'
+import DrugCurveModal from '@components/modals/DrugCurveModal/DrugCurveModal'
 
 interface Props {
   name: string
@@ -19,7 +23,7 @@ interface Props {
   image: 'sdr' | 'ttlbl' | 'colorng' | 'drugCurves' | 'ljpc' | 'odt'
   url: string
   tech?: string
-  auth?: boolean
+  auth?: [string, string]
 }
 
 const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescription, auth }) => {
@@ -70,15 +74,19 @@ const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescr
       break
     case 'colorng':
       imageComponent = <ColorngCardImage />
+      modal = <ColorngModal {...modalConfig} />
       break
     case 'drugCurves':
       imageComponent = <DrugCurvesCardImage />
+      modal = <DrugCurveModal {...modalConfig} />
       break
     case 'ljpc':
       imageComponent = <LJPCCardImage />
+      modal = <LJPCModal {...modalConfig} />
       break
     case 'odt':
       imageComponent = <OdonateCardImage />
+      modal = <ODTModal {...modalConfig} />
       break
     default:
       imageComponent = <TTLBLCardImage />

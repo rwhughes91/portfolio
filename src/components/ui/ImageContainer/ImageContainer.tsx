@@ -7,11 +7,14 @@ import FlowerImage from '@components/ui/images/FlowerImage'
 
 interface Props {
   collage?: boolean
+  customRef?: (node?: Element | null | undefined) => void
+  inView?: boolean
 }
 
-const ImageContainer: React.FC<Props> = ({ collage }) => {
+const ImageContainer: React.FC<Props> = ({ collage, customRef, inView }) => {
   return (
     <div
+      ref={customRef}
       className={[classes.imageContainer, collage ? classes.imageContainerCollage : null].join(' ')}
     >
       <div className={classes.composition}>
@@ -20,6 +23,7 @@ const ImageContainer: React.FC<Props> = ({ collage }) => {
             classes.image,
             classes.firstImage,
             collage ? classes.imageCollage : null,
+            inView ? classes.inView : null,
           ].join(' ')}
         />
         <MarlowImage
@@ -27,6 +31,7 @@ const ImageContainer: React.FC<Props> = ({ collage }) => {
             classes.image,
             classes.secondImage,
             collage ? classes.imageCollage : null,
+            inView ? classes.inView : null,
           ].join(' ')}
         />
         <FlowerImage
@@ -34,6 +39,7 @@ const ImageContainer: React.FC<Props> = ({ collage }) => {
             classes.image,
             classes.thirdImage,
             collage ? classes.imageCollage : null,
+            inView ? classes.inView : null,
           ].join(' ')}
         />
       </div>

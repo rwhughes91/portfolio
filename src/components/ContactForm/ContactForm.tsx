@@ -61,13 +61,13 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
           setErrorFlash(true)
         })
     },
-    [formState]
+    [formState, onResetHandler]
   )
 
   const onModalPress = useCallback(() => {
     setShowModal(false)
     onPress()
-  }, [])
+  }, [onPress])
 
   useEffect(() => {
     if (show && backRef.current) {

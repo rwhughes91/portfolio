@@ -15,6 +15,7 @@ const TTLBLDashboardImage: React.FC<Props> = ({ styles, customClassNames }) => {
       <Img
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="New Jersey Database Dashboard Page"
+        draggable={false}
       />
     </div>
   )

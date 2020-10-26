@@ -13,7 +13,10 @@ export const initialState = {
   message: '',
 }
 
-export const reducer = (state: typeof initialState, action: EditAction | ResetAction) => {
+export const reducer: (
+  x: typeof initialState,
+  action: EditAction | ResetAction
+) => typeof initialState = (state: typeof initialState, action: EditAction | ResetAction) => {
   switch (action.type) {
     case 'edit':
       return {

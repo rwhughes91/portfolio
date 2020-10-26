@@ -12,7 +12,11 @@ const TTLBLDetailImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={{ ...data.file.childImageSharp.fluid }} alt="New Jersey Database Detail Page" />
+      <Img
+        fluid={{ ...data.file.childImageSharp.fluid }}
+        alt="New Jersey Database Detail Page"
+        draggable={false}
+      />
     </div>
   )
 }

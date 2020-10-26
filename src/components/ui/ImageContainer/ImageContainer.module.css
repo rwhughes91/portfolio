@@ -41,6 +41,7 @@ div.image {
     transform: scale(1.05) translateZ(0) rotate(0.01deg);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   }
+
   div.imageCollage.firstImage {
     top: 0;
     left: 0;

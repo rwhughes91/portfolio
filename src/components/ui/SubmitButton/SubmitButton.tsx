@@ -7,7 +7,7 @@ interface Props {
   customClassNames?: string
   customButtonClassNames?: string
   disabled?: boolean
-  onPress: () => void
+  onPress?: () => void
 }
 
 const SubmitButton: React.FC<Props> = ({
@@ -15,7 +15,7 @@ const SubmitButton: React.FC<Props> = ({
   customClassNames,
   customButtonClassNames,
   disabled,
-  onPress
+  onPress,
 }) => {
   return (
     <Button

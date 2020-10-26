@@ -9,11 +9,14 @@ interface Props {
 
 const Github: React.FC<Props> = ({ customClassNames, inverted }) => {
   return (
-    <button
+    <a
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+      href="https://github.com/rwhughes91"
+      target="_blank"
+      rel="noreferrer"
     >
       <FiGithub size={16} />
-    </button>
+    </a>
   )
 }
 

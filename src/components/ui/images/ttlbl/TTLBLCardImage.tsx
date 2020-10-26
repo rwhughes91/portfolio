@@ -15,6 +15,7 @@ const TTLBLCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
       <Img
         fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }}
         alt="New Jersey Database Card"
+        draggable={false}
       />
     </div>
   )

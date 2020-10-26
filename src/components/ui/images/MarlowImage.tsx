@@ -12,7 +12,7 @@ const MarlowImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={data.file.childImageSharp.fluid} alt="Scary Marlow" />
+      <Img fluid={data.file.childImageSharp.fluid} alt="Scary Marlow" draggable={false} />
     </div>
   )
 }

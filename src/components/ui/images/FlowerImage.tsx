@@ -12,7 +12,11 @@ const FlowerImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={data.file.childImageSharp.fluid} alt="Del Mar, San Diego Flower Field" />
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Del Mar, San Diego Flower Field"
+        draggable={false}
+      />
     </div>
   )
 }

@@ -16,7 +16,7 @@ interface Props {
   description: string
   url: string
   tech?: string
-  auth?: boolean
+  auth?: [string, string]
 }
 
 const TTLBLModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {

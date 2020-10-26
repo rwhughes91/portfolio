@@ -1,11 +1,11 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import classes from './AboutScene.module.css'
 import Section from '@components/Section/Section'
 import Column from '@components/Layout/Column/Column'
 import Row from '@components/Layout/Row/Row'
 import Text from '@components/ui/Text/Text'
 import ImageContainer from '@components/ui/ImageContainer/ImageContainer'
-import { useStaticQuery, graphql } from 'gatsby'
 import List from '@components/ui/List/List'
 import HeaderText from '@components/ui/HeaderText/HeaderText'
 
@@ -19,11 +19,11 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
   const data: GetAboutUsDataQuery = useStaticQuery(query)
 
   const techTags = data.allDataJson.nodes[0].languages!.concat(
-    data.allDataJson.nodes[0].js!,
-    data.allDataJson.nodes[0].server!,
-    data.allDataJson.nodes[0].web!,
-    data.allDataJson.nodes[0].databases!,
-    data.allDataJson.nodes[0].tools!
+    data.allDataJson.nodes[0].js as string[],
+    data.allDataJson.nodes[0].server as string[],
+    data.allDataJson.nodes[0].web as string[],
+    data.allDataJson.nodes[0].databases as string[],
+    data.allDataJson.nodes[0].tools as string[]
   )
 
   return (

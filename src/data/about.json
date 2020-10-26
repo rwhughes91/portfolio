@@ -8,5 +8,5 @@
   "server": ["Node.js", "Django", "Flask"],
   "web": ["Css/Scss", "HTML"],
   "databases": ["SQL databases", "Mongodb", "Firebase"],
-  "tools": ["AWS", "Docker", "Git", "Github", "Bash", "Bootstrap", "Figma"]
+  "tools": ["Webpack", "Babel", "PostCss", "AWS", "Eslint", "Prettier", "Docker", "Git", "Github", "Bash", "Bootstrap", "Figma"]
 }

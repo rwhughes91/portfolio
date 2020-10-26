@@ -19,7 +19,8 @@
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@images/*": ["./src/images/*"],
-      "@types/*": ["./src/types/*"]
+      "@types/*": ["./src/types/*"],
+      "@pdfs/*": ["./src/pdfs/*"]
     }
   },
   "exclude": ["node_modules", "public", ".cache"]

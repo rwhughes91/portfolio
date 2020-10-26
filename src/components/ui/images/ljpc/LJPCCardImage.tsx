@@ -7,20 +7,21 @@ interface Props {
   customClassNames?: string
 }
 
-const JLPCCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
+const LJPCCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const data = useStaticQuery(ljpcCardQuery)
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
       <Img
         fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }}
-        alt="Drug Curves Card"
+        alt="LJPC Card"
+        draggable={false}
       />
     </div>
   )
 }
 
-export default React.memo(JLPCCardImage)
+export default React.memo(LJPCCardImage)
 
 const ljpcCardQuery = graphql`
   query LjpcCardImageQuery {

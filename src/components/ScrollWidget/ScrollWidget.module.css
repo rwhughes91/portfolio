@@ -21,6 +21,12 @@
   animation-delay: -0.4s;
 }
 
+@media (max-height: 350px) {
+  .scroll {
+    display: none;
+  }
+}
+
 @keyframes animate {
   0% {
     opacity: 0;
