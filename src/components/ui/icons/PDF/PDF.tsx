@@ -16,6 +16,7 @@ const PDF: React.FC<Props> = ({ customClassNames, label, href }) => {
       href={href}
       target="_blank"
       rel="noreferrer"
+      aria-label="Pdf Report Download"
     >
       <Text size="small" customClassNames={classes.header}>
         {label}

@@ -18,6 +18,7 @@ const Refresh: React.FC<Props> = ({ customClassNames, inverted, onPress }) => {
         inverted ? classes.iconInverted : null,
       ].join(' ')}
       onClick={onPress}
+      aria-label="Refresh Icon"
     >
       <FiRefreshCw size={20} />
     </button>

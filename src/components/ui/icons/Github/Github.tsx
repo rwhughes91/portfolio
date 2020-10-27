@@ -14,6 +14,7 @@ const Github: React.FC<Props> = ({ customClassNames, inverted }) => {
       href="https://github.com/rwhughes91"
       target="_blank"
       rel="noreferrer"
+      aria-label="Github Link"
     >
       <FiGithub size={16} />
     </a>

@@ -18,6 +18,7 @@ const Plus: React.FC<Props> = ({ customClassNames, onPress, type }) => {
         type === 'plus' ? classes.iconInverted : null,
       ].join(' ')}
       onClick={onPress}
+      aria-label="Plus Icon"
     >
       {type === 'plus' ? <FiPlus size={16} /> : <FiX size={16} />}
     </button>

@@ -33,12 +33,14 @@ const Slideshow: React.FC<Props> = ({ children }) => {
         <button
           className={[classes.iconLeft, classes.icon].join(' ')}
           onClick={() => onClickHandler('prev')}
+          aria-label="Previous Image"
         />
       )}
       {slideNumber < children.length - 1 && (
         <button
           className={[classes.iconRight, classes.icon].join(' ')}
           onClick={() => onClickHandler('next')}
+          aria-label="Next Image"
         />
       )}
       <div

@@ -20,6 +20,7 @@ const ArrowLeft: React.FC<Props> = ({ customClassNames, inverted, onPress, custo
       ].join(' ')}
       onClick={onPress}
       ref={customRef}
+      aria-label="Back Icon"
     >
       <FiArrowLeft size={24} />
     </button>

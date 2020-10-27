@@ -14,6 +14,7 @@ const LinkedIn: React.FC<Props> = ({ customClassNames, inverted }) => {
       href="https://www.linkedin.com/in/robert-hughes-9050ab100/"
       target="_blank"
       rel="noreferrer"
+      aria-label="LinkedIn Link"
     >
       <FaLinkedinIn size={16} />
     </a>

@@ -56,7 +56,9 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
   return (
     <>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
+        <meta name="description" content="Robbie's portfolio to get a sweet full-stack developer job" />
         <title>{data.site?.siteMetadata?.title}</title>
         {data.site?.siteMetadata?.link && (
           <link rel="canonical" href={data.site?.siteMetadata?.link} />

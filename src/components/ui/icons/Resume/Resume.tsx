@@ -11,6 +11,7 @@ const Resume: React.FC<Props> = ({ customClassNames, inverted }) => {
   return (
     <button
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
+      aria-label="Resume Icon"
     >
       <FaRegFilePdf size={16} />
     </button>

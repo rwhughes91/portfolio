@@ -14,6 +14,7 @@ const Exit: React.FC<Props> = ({ customClassNames, inverted, onPress, size }) =>
     <button
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
       onClick={onPress}
+      aria-label="Exit Icon"
     >
       <FiX size={size || 16} />
     </button>

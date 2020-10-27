@@ -8,9 +8,10 @@ interface Props {
   size: 'small' | 'medium' | 'large' | 'xSmall' | 'xLarge' | 'header'
   customClassNames?: string
   customRef?: React.MutableRefObject<HTMLSpanElement | null>
+  ariaHidden?: boolean
 }
 
-const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames, customRef }) => {
+const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames, customRef, ariaHidden }) => {
   const classNames = [classes.text, bold ? classes.bold : null, customClassNames]
   switch (size) {
     case 'xSmall':
@@ -33,7 +34,7 @@ const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames,
       break
   }
   return (
-    <span className={classNames.join(' ')} style={styles} ref={customRef}>
+    <span className={classNames.join(' ')} style={styles} ref={customRef} aria-hidden={ariaHidden}>
       {children}
     </span>
   )

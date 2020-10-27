@@ -13,6 +13,7 @@ const ArrowUp: React.FC<Props> = ({ customClassNames, inverted, onPress }) => {
     <button
       className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null].join(' ')}
       onClick={onPress}
+      aria-label="Up Arrow Icon"
     >
       <FiArrowUp size={16} />
     </button>
