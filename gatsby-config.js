@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Robbie Hughes | Full Stack Developer',
     description: 'My portfolio project',
-    link: 'http://mysite.com/example"',
+    link: 'https://find-robbie-hughes.netlify.app'
   },
   plugins: [
     {
