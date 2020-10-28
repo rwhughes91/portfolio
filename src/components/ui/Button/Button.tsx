@@ -37,8 +37,18 @@ const Button: React.FC<Props> = ({
       break
   }
   return (
-    <button className={classNames.join(' ')} ref={customRef} onClick={onPress} disabled={disabled} aria-label={children}>
-      <Text size={size} customClassNames={[classes.buttonText, customClassNames].join(' ')} ariaHidden>
+    <button
+      className={classNames.join(' ')}
+      ref={customRef}
+      onClick={onPress}
+      disabled={disabled}
+      aria-label={children}
+    >
+      <Text
+        size={size}
+        customClassNames={[classes.buttonText, customClassNames].join(' ')}
+        ariaHidden
+      >
         {children}
       </Text>
     </button>

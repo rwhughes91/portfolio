@@ -12,9 +12,19 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  shortDescription: string
 }
 
-const ColorngModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {
+const ColorngModal: React.FC<Props> = ({
+  show,
+  onPress,
+  name,
+  description,
+  url,
+  tech,
+  auth,
+  shortDescription,
+}) => {
   const images = [<ColorngOneImage key={0} />, <ColorngTwoImage key={1} />]
 
   return (
@@ -27,6 +37,7 @@ const ColorngModal: React.FC<Props> = ({ show, onPress, name, description, url, 
       url={url}
       tech={tech}
       auth={auth}
+      shortDescription={shortDescription}
     />
   )
 }

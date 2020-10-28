@@ -11,9 +11,19 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  shortDescription: string
 }
 
-const ODTModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {
+const ODTModal: React.FC<Props> = ({
+  show,
+  onPress,
+  name,
+  description,
+  url,
+  tech,
+  auth,
+  shortDescription,
+}) => {
   const images = [<OdonateHomeImage key={0} />]
 
   return (
@@ -26,6 +36,7 @@ const ODTModal: React.FC<Props> = ({ show, onPress, name, description, url, tech
       url={url}
       tech={tech}
       auth={auth}
+      shortDescription={shortDescription}
     />
   )
 }

@@ -6,6 +6,7 @@ import Text from '@components/ui/Text/Text'
 import Column from '@components/Layout/Column/Column'
 import Row from '@components/Layout/Row/Row'
 import Button from '@components/ui/Button/Button'
+import ExitIcon from '@components/ui/icons/Exit/Exit'
 
 interface Props {
   show: boolean
@@ -13,6 +14,7 @@ interface Props {
   images?: JSX.Element[]
   title: string
   description: string
+  shortDescription: string
   url: string
   tech?: string
   auth?: [string, string]
@@ -32,6 +34,7 @@ const CardModal: React.FC<Props> = ({
   auth,
   noButton,
   icons,
+  shortDescription,
 }) => {
   const onPressHandler = useCallback(() => {
     window.open(url, '_blank')
@@ -43,7 +46,7 @@ const CardModal: React.FC<Props> = ({
         {images && <SlideShow>{images}</SlideShow>}
         <Column customClassNames={classes.content}>
           <Row customClassNames={classes.header}>
-            <Text size="large" customClassNames={classes.center}>
+            <Text size="large" customClassNames={[classes.center, classes.flex].join(' ')}>
               {title}
             </Text>
             {!noButton && (
@@ -56,9 +59,18 @@ const CardModal: React.FC<Props> = ({
                 Go to site
               </Button>
             )}
+            <div className={classes.exit}>
+              <ExitIcon customClassNames={classes.exitIcon} onPress={onPress} />
+            </div>
           </Row>
-          <Text size="medium" customClassNames={classes.center}>
+          <Text size="medium" customClassNames={[classes.center, classes.description].join(' ')}>
             {description}
+          </Text>
+          <Text
+            size="medium"
+            customClassNames={[classes.center, classes.shortDescription].join(' ')}
+          >
+            {shortDescription}
           </Text>
           {tech && (
             <>

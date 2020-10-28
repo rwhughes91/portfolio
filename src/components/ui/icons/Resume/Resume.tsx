@@ -11,7 +11,12 @@ interface Props {
 const Resume: React.FC<Props> = ({ customClassNames, inverted, small }) => {
   return (
     <button
-      className={[classes.icon, customClassNames, inverted ? classes.iconInverted : null, small ? classes.small : null].join(' ')}
+      className={[
+        classes.icon,
+        customClassNames,
+        inverted ? classes.iconInverted : null,
+        small ? classes.small : null,
+      ].join(' ')}
       aria-label="Resume Icon"
     >
       <FaRegFilePdf size={16} />

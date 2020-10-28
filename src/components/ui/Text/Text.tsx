@@ -11,7 +11,15 @@ interface Props {
   ariaHidden?: boolean
 }
 
-const Text: React.FC<Props> = ({ styles, bold, size, children, customClassNames, customRef, ariaHidden }) => {
+const Text: React.FC<Props> = ({
+  styles,
+  bold,
+  size,
+  children,
+  customClassNames,
+  customRef,
+  ariaHidden,
+}) => {
   const classNames = [classes.text, bold ? classes.bold : null, customClassNames]
   switch (size) {
     case 'xSmall':

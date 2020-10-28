@@ -65,6 +65,7 @@ const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescr
     description,
     tech,
     auth,
+    shortDescription,
   }
 
   switch (image) {

@@ -31,7 +31,11 @@ const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
       </Row>
       <div className={classes.content}>
         <Column customClassNames={classes.column}>
-          <Text size="small" styles={{ textAlign: 'center' }} customClassNames={[classes.pad, classes.marginBottom, classes.learnSomething].join(' ')}>
+          <Text
+            size="small"
+            styles={{ textAlign: 'center' }}
+            customClassNames={[classes.pad, classes.marginBottom, classes.learnSomething].join(' ')}
+          >
             Learn something everyday, one day at a time.
           </Text>
           <Row customClassNames={classes.icons} customRef={customRef}>
@@ -40,7 +44,11 @@ const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
             <GithubIcon small />
             <LinkedInIcon small />
           </Row>
-          <Text size="small" styles={{ textAlign: 'center' }} customClassNames={[classes.pad, classes.marginTop].join(' ')}>
+          <Text
+            size="small"
+            styles={{ textAlign: 'center' }}
+            customClassNames={[classes.pad, classes.marginTop].join(' ')}
+          >
             Robbie Hughes &copy; 2020
           </Text>
         </Column>

@@ -15,14 +15,24 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  shortDescription: string
 }
 
-const DrugCurveModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {
+const DrugCurveModal: React.FC<Props> = ({
+  show,
+  onPress,
+  name,
+  description,
+  url,
+  tech,
+  auth,
+  shortDescription,
+}) => {
   const icons = (
     <div className={classes.icons}>
-      <PDFIcon label="Alk Inhibitors" href={Alk} />
-      <PDFIcon label="Norepinephrine" href={Norepinephrine} />
-      <PDFIcon label="Vasopressin" href={Vasopressin} />
+      <PDFIcon label="Alk..." href={Alk} />
+      <PDFIcon label="Nor.." href={Norepinephrine} />
+      <PDFIcon label="Vaso.." href={Vasopressin} />
     </div>
   )
   return (
@@ -36,6 +46,7 @@ const DrugCurveModal: React.FC<Props> = ({ show, onPress, name, description, url
       auth={auth}
       noButton
       icons={icons}
+      shortDescription={shortDescription}
     />
   )
 }

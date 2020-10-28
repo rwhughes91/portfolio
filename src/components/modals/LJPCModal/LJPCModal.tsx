@@ -11,9 +11,19 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  shortDescription: string
 }
 
-const LJPCModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {
+const LJPCModal: React.FC<Props> = ({
+  show,
+  onPress,
+  name,
+  description,
+  url,
+  tech,
+  auth,
+  shortDescription,
+}) => {
   const images = [<LJPCHomeImage key={0} />]
 
   return (
@@ -26,6 +36,7 @@ const LJPCModal: React.FC<Props> = ({ show, onPress, name, description, url, tec
       url={url}
       tech={tech}
       auth={auth}
+      shortDescription={shortDescription}
     />
   )
 }

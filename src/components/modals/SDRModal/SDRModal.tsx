@@ -17,9 +17,19 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  shortDescription: string
 }
 
-const TTLBLModal: React.FC<Props> = ({ show, onPress, name, description, url, tech, auth }) => {
+const TTLBLModal: React.FC<Props> = ({
+  show,
+  onPress,
+  name,
+  description,
+  url,
+  tech,
+  auth,
+  shortDescription,
+}) => {
   const images = [
     <SDRHomeImage key={0} />,
     <SDRNewsImage key={1} />,
@@ -40,6 +50,7 @@ const TTLBLModal: React.FC<Props> = ({ show, onPress, name, description, url, te
       url={url}
       tech={tech}
       auth={auth}
+      shortDescription={shortDescription}
     />
   )
 }

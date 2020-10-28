@@ -32,7 +32,11 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
 
   useEffect(() => {
     const onScrollWindowHandler = debounce(() => {
-      if (iconRef.current && iconRef.current.getBoundingClientRect().top <= window.innerHeight) {
+      if (
+        iconRef.current &&
+        iconRef.current.getBoundingClientRect().top <= window.innerHeight &&
+        iconRef.current.getBoundingClientRect().top !== 0
+      ) {
         setShowArrowIcon(true)
       } else {
         setShowArrowIcon(false)
@@ -58,7 +62,10 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <meta name="description" content="Robbie's portfolio to get a sweet full-stack developer job" />
+        <meta
+          name="description"
+          content="Robbie's portfolio to get a sweet full-stack developer job"
+        />
         <title>{data.site?.siteMetadata?.title}</title>
         {data.site?.siteMetadata?.link && (
           <link rel="canonical" href={data.site?.siteMetadata?.link} />
