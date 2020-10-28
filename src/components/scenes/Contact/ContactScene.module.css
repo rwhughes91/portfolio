@@ -29,6 +29,18 @@ span.pad {
   padding: 0 1rem;
 }
 
+span.marginTop {
+  margin-top: 1rem;
+}
+
+span.marginBottom {
+  margin-bottom: 1rem;
+}
+
+span.learnSomething {
+  display: none;
+}
+
 div.contactMe {
   background-color: var(--dark-blue-2);
   flex-direction: column;
@@ -43,7 +55,24 @@ div.icons {
   max-width: 20rem;
   min-width: 200px;
   justify-content: space-between;
-  margin: 3rem 0;
+  display: none;
+}
+
+@media (min-width: 592px) {
+  span.marginTop {
+    margin-top: 3rem;
+  }
+
+  span.marginBottom {
+    margin-bottom: 3rem;
+  }
+
+  span.learnSomething {
+    display: inline-block;
+  }
+  div.icons {
+    display: flex;
+  }
 }
 
 @media (min-width: 640px) {

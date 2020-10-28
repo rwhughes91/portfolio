@@ -45,7 +45,7 @@ div.hideArrow,
 button.hideArrow {
   transition: all 0.2s;
   position: relative;
-  top: 5rem;
+  top: 7rem;
   z-index: 2;
 }
 
@@ -76,5 +76,18 @@ button.plus {
     visibility: hidden;
     pointer-events: none;
     transform: translateX(4rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  div.hideArrow,
+  button.hideArrow {
+    top: 6.05rem;
+  }
+}
+@media (min-width: 1800px) {
+  div.hideArrow,
+  button.hideArrow {
+    top: 5.5rem;
   }
 }

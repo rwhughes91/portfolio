@@ -15,7 +15,7 @@
 
 div.image {
   width: 100vw;
-  max-width: 30rem;
+  max-width: 34rem;
   z-index: 0;
   transition: all 0.2s;
   box-shadow: var(--box-shadow);

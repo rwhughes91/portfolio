@@ -27,7 +27,7 @@
   opacity: 1;
 }
 
-.icon:before {
+.icon::before {
   display: inline;
   font-size: 36px;
   color: var(--light-gray-2);
@@ -43,11 +43,11 @@
   border-top-left-radius: 3px;
 }
 
-.iconRight:before {
+.iconRight::before {
   content: '\003E';
 }
 
-.iconLeft:before {
+.iconLeft::before {
   content: '\003C';
 }
 

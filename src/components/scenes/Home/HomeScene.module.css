@@ -14,3 +14,17 @@ div.headers {
 .button {
   margin-top: 3rem;
 }
+
+.backgroundImage,
+.backgroundImage::before,
+.backgroundImage::after {
+  z-index: 100;
+}
+
+@media (min-width: 1281px) {
+  .backgroundImage,
+  .backgroundImage::before,
+  .backgroundImage::after {
+    background-attachment: fixed !important;
+  }
+}

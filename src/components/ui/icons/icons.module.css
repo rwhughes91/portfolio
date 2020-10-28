@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 2rem;
   color: var(--dark-blue-2);
   transition: all 0.2s;
 }
@@ -18,11 +18,7 @@
 .icon:active {
   color: var(--light-gray-1);
   background-color: var(--dark-blue-2);
-  transform: scale(1.05);
-}
-
-.icon:active {
-  transform: scale(1);
+  box-shadow: 0 0 0 0.15rem rgba(233, 236, 239, 0.25);
 }
 
 .icon:focus {
@@ -99,7 +95,6 @@
 }
 
 .pdfIcon:hover {
-  transform: none;
   color: var(--light-gray-2);
 }
 
@@ -108,8 +103,24 @@
   transition: none;
 }
 
+.small {
+  padding: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .icon {
+    padding: 1.75rem;
+  }
+  .small {
+    padding: 1.25rem;
+  }
+}
+
 @media (min-width: 1800px) {
-  .pdfIcon {
-    width: 11rem;
+  .icon {
+    padding: 1.5rem;
+  }
+  .small {
+    padding: 1.25rem;
   }
 }

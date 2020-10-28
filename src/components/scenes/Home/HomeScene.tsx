@@ -21,7 +21,7 @@ const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
       Tag="section"
       fluid={bgImage}
       backgroundColor="var(--dark-blue-2)"
-      style={{ zIndex: 100, backgroundAttachment: 'fixed' }}
+      className={classes.backgroundImage}
     >
       <Section
         styles={{ backgroundColor: 'rgba(19, 44, 68, .50)', position: 'relative', zIndex: 101 }}
