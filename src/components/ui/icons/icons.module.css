@@ -98,6 +98,7 @@
 
 .pdfIcon:hover {
   color: var(--light-gray-2);
+  box-shadow: 0 0 0 0.15rem rgba(19, 44, 68, 0.25);
 }
 
 .pdfIcon:hover span.header {

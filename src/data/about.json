@@ -6,7 +6,7 @@
   "languages": ["Javascript", "Python 3", "Graphql"],
   "js": ["Typescript", "React", "React Native", "Next", "Gatsby", "Socket.io", "JQuery"],
   "server": ["Node.js", "Express.js", "Nest.js", "Django", "Flask"],
-  "web": ["Css/Scss", "HTML"],
+  "web": ["Css3/Scss", "HTML5"],
   "databases": ["SQL databases", "Mongodb", "Firebase"],
   "tools": ["Webpack", "Babel", "PostCss", "AWS", "Eslint", "Prettier", "Docker", "Git", "Github", "Bash", "Bootstrap", "Figma"]
 }

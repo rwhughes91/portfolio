@@ -43,6 +43,7 @@ const IconContainer: React.FC<Props> = ({ arrow, onPress, hide }) => {
       {iconBar}
       <ArrowUpIcon
         onPress={onPress}
+        tabIndex={arrow ? undefined : -1}
         customClassNames={[
           classes.margin,
           arrow ? classes.showArrow : classes.hideArrow,

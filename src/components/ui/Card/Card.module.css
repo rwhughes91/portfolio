@@ -50,7 +50,6 @@ span.description {
 .show {
   opacity: 1;
 }
-
 @media (min-width: 320px) {
   .caption {
     justify-content: flex-end;

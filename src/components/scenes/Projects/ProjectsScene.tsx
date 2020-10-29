@@ -64,7 +64,7 @@ const ProjectsScene: React.FC = () => {
               name="Drug Curves"
               description="A python project that organizes, analyzes, and generates pdf reports for several U.S. drug markets, including alk inhibitors, metastatic breast cancer drugs, norepinephrine and vasopressin, oral iron chelators, nk1 receptor antagonists and 5-ht3 receptor antagonists."
               shortDescription="A python project that organizes, analyzes, and generates pdf reports for several drug markets."
-              tech="Python 3, Sqlite, Peewee, Pandas, Numpy, Matplotlib, Xlsxwriter, Html5, Css, Babel, Unittest, Jupyter Notebook, Ipython"
+              tech="Python 3, Sqlite, Peewee, Pandas, Numpy, Matplotlib, Xlsxwriter, Html5, Css3, Babel, Selenium, Unittest, Jupyter Notebook, Ipython"
               url=""
             />
           </Row>

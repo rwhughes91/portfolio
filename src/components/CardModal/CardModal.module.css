@@ -7,6 +7,10 @@ div.modal {
   overflow-y: scroll;
 }
 
+div.modal::-webkit-scrollbar {
+  display: none;
+}
+
 .cardModal {
   width: 100%;
   display: flex;
