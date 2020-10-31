@@ -4,9 +4,32 @@
   "body": "I'm a perpetual learner and love all things related to web development; however, this wasn't always the case. I graduated from UC San Diego with majors in Economics and Neuroscience and shortly after graduation began working as an analyst at a biotech focused hedge fund. While I was incredibly thankful for this rare and unique opportunity, I wasn't passionate about my job. This led me to search for a career I would love and I'm proud to say it led me to full-stack web development.",
   "footer": "I also enjoy watching sports, going on hikes, and corgis!",
   "languages": ["JavaScript/TypeScript", "Python 3", "GraphQL"],
-  "js": ["React", "React Native", "Next", "Gatsby", "Socket.io", "jQuery", "Prisma", "Apollo Client", "Relay"],
+  "js": [
+    "React",
+    "React Native",
+    "Next",
+    "Gatsby",
+    "Socket.io",
+    "jQuery",
+    "Prisma",
+    "Apollo Client",
+    "Relay"
+  ],
   "server": ["Node.js", "Express.js", "Nest.js", "Django", "Flask"],
   "web": ["CSS3/SCSS", "HTML5"],
-  "databases": ["PostgreSQL", "MongoDB", "Firebase"],
-  "tools": ["Webpack", "Babel", "PostCSS", "AWS", "ESLint", "Prettier", "Docker", "Git", "Github", "Linux", "Bootstrap", "Figma"]
+  "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+  "tools": [
+    "Webpack",
+    "Babel",
+    "PostCSS",
+    "AWS",
+    "ESLint",
+    "Prettier",
+    "Docker",
+    "Git",
+    "Github",
+    "Linux",
+    "Bootstrap",
+    "Figma"
+  ]
 }

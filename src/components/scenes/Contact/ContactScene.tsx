@@ -29,7 +29,7 @@ const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
           Reach out
         </Button>
       </Row>
-      <div className={classes.content}>
+      <footer className={classes.content}>
         <Column customClassNames={classes.column}>
           <Text
             size="small"
@@ -52,7 +52,7 @@ const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
             Robbie Hughes &copy; 2020
           </Text>
         </Column>
-      </div>
+      </footer>
     </div>
   )
 }

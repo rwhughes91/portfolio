@@ -19,7 +19,7 @@ const ProjectsScene: React.FC = () => {
               shortDescription="A record label e-commerce web application."
               description="A record label e-commerce web application that primarily manages metal, punk, and hard rock bands. This app also includes an admin interface (inspired by django-admin) to easily manage and add data."
               tech="JavaScript/TypeScript, React, Next.js, Apollo Micro Server (GraphQL), Firebase, Stripe, SendGrid/Twilio, AWS S3, AWS CloudFront, SCSS, CSS Modules, PostCSS, Webpack, Babel, Jest, Vercel"
-              url="https://super-delicious-records-nvn09ff67.vercel.app/"
+              url="https://super-delicious-records.vercel.app/"
             />
             <Card
               image="colorng"
@@ -33,18 +33,18 @@ const ProjectsScene: React.FC = () => {
               ]}
               url="https://expo.io/@rwhughes91/projects/colorNg"
             />
-              <Card
-                image="ttlbl"
-                name="New Jersey Tax Lien Database"
-                shortDescription="A web app/accounting tool for acquired tax liens in the state of New Jersey."
-                description="A web app/accounting tool for acquired tax liens in the state of New Jersey. We used this tool for both accounting and financial analysis."
-                tech="JavaScript, React, Apollo Server (GraphQL), MongoDB, Redux, Redux-Saga, Socket.io, SendGrid/Twilio, AWS S3, CSS Modules, PostCSS, Webpack, Babel, Jest, Heroku."
-                auth={[
-                  'Authentication is required to use app.',
-                  ' Please contact me if you wish to see a demo.',
-                ]}
-                url="https://new-jersey-database.herokuapp.com/"
-              />
+            <Card
+              image="ttlbl"
+              name="New Jersey Tax Lien Database"
+              shortDescription="A web app/accounting tool for acquired tax liens in the state of New Jersey."
+              description="A web app/accounting tool for acquired tax liens in the state of New Jersey. We used this tool for both accounting and financial analysis."
+              tech="JavaScript, React, Apollo Server (GraphQL), MongoDB, Redux, Redux-Saga, Socket.io, SendGrid/Twilio, AWS S3, CSS Modules, PostCSS, Webpack, Babel, Jest, Heroku."
+              auth={[
+                'Authentication is required to use app.',
+                ' Please contact me if you wish to see a demo.',
+              ]}
+              url="https://new-jersey-database.herokuapp.com/"
+            />
             <Card
               image="odt"
               name="Odonate Therapeutics"

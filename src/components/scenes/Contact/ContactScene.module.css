@@ -52,8 +52,8 @@ div.contactMe {
 
 div.icons {
   width: 100%;
-  max-width: 20rem;
-  min-width: 200px;
+  max-width: 22.5rem;
+  min-width: 225px;
   justify-content: space-between;
   display: none;
 }
@@ -97,5 +97,9 @@ div.icons {
 @media (min-width: 1800px) {
   div.contactMe {
     top: 6.25rem;
+  }
+  div.icons {
+    max-width: 20rem;
+    min-width: 200px;
   }
 }
