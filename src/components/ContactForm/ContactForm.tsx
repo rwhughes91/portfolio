@@ -108,8 +108,8 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
             top: 0,
             left: 0,
           }}
-          pad
           fill
+          // pad
         >
           <form className={classes.form} onSubmit={onSubmitHandler}>
             <Row customClassNames={classes.iconBarHeader}>

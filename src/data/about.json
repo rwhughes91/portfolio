@@ -11,13 +11,12 @@
     "Gatsby",
     "Socket.io",
     "jQuery",
-    "Prisma",
     "Apollo Client",
     "Relay"
   ],
   "server": ["Node.js", "Express.js", "Nest.js", "Django", "Flask"],
   "web": ["CSS3/SCSS", "HTML5"],
-  "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+  "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma"],
   "tools": [
     "Webpack",
     "Babel",

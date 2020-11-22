@@ -20,9 +20,9 @@
 
 @media (min-width: 1120px) and (min-height: 700px) {
   .section {
-    height: 100vh;
+    /* height: 100vh;
     min-height: 75rem;
-    max-height: 150rem;
+    max-height: 150rem; */
   }
   .section.polygon {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
