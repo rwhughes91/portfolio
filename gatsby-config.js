@@ -1,10 +1,14 @@
 const path = require('path')
 
+const LINK = 'https://find-robbie-hughes.netlify.app'
+
 module.exports = {
   siteMetadata: {
     title: 'Robbie Hughes | Full Stack Developer',
     description: 'My portfolio project',
-    link: 'https://find-robbie-hughes.netlify.app',
+    link: LINK,
+    contactTitle: 'Contact | Robbie Hughes',
+    linkContact: `${LINK}/contact`,
   },
   plugins: [
     {

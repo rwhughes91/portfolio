@@ -2026,6 +2026,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___title'
   | 'siteMetadata___description'
   | 'siteMetadata___link'
+  | 'siteMetadata___contactTitle'
+  | 'siteMetadata___linkContact'
   | 'port'
   | 'host'
   | 'polyfill'
@@ -2687,12 +2689,16 @@ export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   link?: Maybe<Scalars['String']>;
+  contactTitle?: Maybe<Scalars['String']>;
+  linkContact?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   link?: Maybe<StringQueryOperatorInput>;
+  contactTitle?: Maybe<StringQueryOperatorInput>;
+  linkContact?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -2842,6 +2848,11 @@ export type TtlblSearchImageQueryQueryVariables = Exact<{ [key: string]: never; 
 
 
 export type TtlblSearchImageQueryQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
+export type GetMetadataContactPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetMetadataContactPageQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'contactTitle' | 'linkContact'>> }> };
 
 export type GetMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 

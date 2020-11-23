@@ -14,13 +14,9 @@ import { initialState, reducer } from './reducer'
 import ThankYouModal from '@components/modals/ThankYouModal/ThankYouModal'
 import Loader from '@components/ui/Loader/Loader'
 import FlashMessage from '@components/ui/FlashMessage/FlashMessage'
+import LinkButton from '@components/ui/LinkButton/LinkButton'
 
-interface Props {
-  show: boolean
-  onPress: () => void
-}
-
-const ContactForm: React.FC<Props> = ({ onPress, show }) => {
+const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [errorFlash, setErrorFlash] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -66,14 +62,13 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
 
   const onModalPress = useCallback(() => {
     setShowModal(false)
-    onPress()
-  }, [onPress])
+  }, [])
 
   useEffect(() => {
-    if (show && backRef.current) {
+    if (backRef.current) {
       backRef.current.focus()
     }
-  }, [show])
+  }, [])
 
   useEffect(() => {
     let timer: NodeJS.Timeout
@@ -89,119 +84,108 @@ const ContactForm: React.FC<Props> = ({ onPress, show }) => {
 
   return (
     <>
-      <CSSTransition
-        in={show}
-        timeout={500}
-        unmountOnExit
-        classNames={{
-          enter: classes.enter,
-          enterActive: classes.enterActive,
-          exit: classes.exit,
-          exitActive: classes.exitActive,
+      <Section
+        styles={{
+          backgroundColor: 'var(--light-gray-2)',
+          position: 'fixed',
+          zIndex: 999,
+          top: 0,
+          left: 0,
         }}
+        fill
       >
-        <Section
-          styles={{
-            backgroundColor: 'var(--light-gray-2)',
-            position: 'fixed',
-            zIndex: 999,
-            top: 0,
-            left: 0,
-          }}
-          fill
-          // pad
-        >
-          <form className={classes.form} onSubmit={onSubmitHandler}>
-            <Row customClassNames={classes.iconBarHeader}>
-              <ArrowLeftIcon onPress={onPress} customRef={backRef} />
-              <Text size="xLarge" bold customClassNames={classes.header}>
-                Contact
+        <form className={classes.form} onSubmit={onSubmitHandler}>
+          <Row customClassNames={classes.iconBarHeader}>
+            <LinkButton to="/" custom>
+              <ArrowLeftIcon customRef={backRef} />
+            </LinkButton>
+            <Text size="xLarge" bold customClassNames={classes.header}>
+              Contact
+            </Text>
+            <RefreshIcon onPress={onResetHandler} />
+          </Row>
+          <div className={classes.formFields}>
+            <Row customClassNames={classes.headerContainer}>
+              <Text size="xLarge" customClassNames={classes.header}>
+                I appreciate your time. I will respond to you ASAP!
               </Text>
-              <RefreshIcon onPress={onResetHandler} />
             </Row>
-            <div className={classes.formFields}>
-              <Row customClassNames={classes.headerContainer}>
-                <Text size="xLarge" customClassNames={classes.header}>
-                  I appreciate your time. I will respond to you ASAP!
-                </Text>
-              </Row>
-              <CSSTransition
-                in={errorFlash}
-                timeout={500}
-                unmountOnExit
-                classNames={{
-                  enter: classes.enter,
-                  enterActive: classes.enterActive,
-                  exit: classes.exit,
-                  exitActive: classes.exitActive,
-                }}
-              >
-                <FlashMessage message="Oops. Looks like there was an error. Are you connected to the internet?" />
-              </CSSTransition>
-              <Row customClassNames={classes.row}>
-                <Column customClassNames={classes.formFieldContainer}>
-                  <input
-                    type="text"
-                    id="name"
-                    className={classes.input}
-                    placeholder="Your name"
-                    value={formState.name}
-                    onChange={value => onChangeHandler('name', value.target.value)}
-                    maxLength={255}
-                    required
-                  />
-                  <label htmlFor="name" className={classes.label}>
-                    <Text size="medium">Name</Text>
-                  </label>
-                </Column>
-                <Column customClassNames={classes.formFieldContainer}>
-                  <input
-                    type="email"
-                    id="email"
-                    className={classes.input}
-                    placeholder="Your email"
-                    value={formState.email}
-                    onChange={value => onChangeHandler('email', value.target.value)}
-                    maxLength={255}
-                    required
-                  />
-                  <label htmlFor="email" className={classes.label}>
-                    <Text size="medium">Email</Text>
-                  </label>
-                </Column>
-              </Row>
-              <Column
-                customClassNames={[
-                  classes.formFieldContainer,
-                  classes.formFieldContainerTextArea,
-                ].join(' ')}
-              >
-                <textarea
-                  id="message"
-                  className={[classes.input, classes.textArea].join(' ')}
-                  placeholder="Please leave a brief description"
-                  maxLength={255 * 3}
-                  value={formState.message}
-                  onChange={value => onChangeHandler('message', value.target.value)}
+            <CSSTransition
+              in={errorFlash}
+              timeout={500}
+              unmountOnExit
+              classNames={{
+                enter: classes.enter,
+                enterActive: classes.enterActive,
+                exit: classes.exit,
+                exitActive: classes.exitActive,
+              }}
+            >
+              <FlashMessage message="Oops. Looks like there was an error. Are you connected to the internet?" />
+            </CSSTransition>
+            <Row customClassNames={classes.row}>
+              <Column customClassNames={classes.formFieldContainer}>
+                <input
+                  type="text"
+                  id="name"
+                  className={classes.input}
+                  placeholder="Your name"
+                  value={formState.name}
+                  onChange={value => onChangeHandler('name', value.target.value)}
+                  maxLength={255}
                   required
                 />
-                <label htmlFor="message" className={classes.label}>
-                  <Text size="medium">Message</Text>
+                <label htmlFor="name" className={classes.label}>
+                  <Text size="medium">Name</Text>
                 </label>
-                {loading ? (
-                  <Loader customClassNames={classes.loader} />
-                ) : (
-                  <SubmitButton customButtonClassNames={classes.submitButton}>Submit</SubmitButton>
-                )}
               </Column>
-            </div>
-          </form>
-          <div className={classes.iconContainer}>
-            <IconContainer />
+              <Column customClassNames={classes.formFieldContainer}>
+                <input
+                  type="email"
+                  id="email"
+                  className={classes.input}
+                  placeholder="Your email"
+                  value={formState.email}
+                  onChange={value => onChangeHandler('email', value.target.value)}
+                  maxLength={255}
+                  required
+                />
+                <label htmlFor="email" className={classes.label}>
+                  <Text size="medium">Email</Text>
+                </label>
+              </Column>
+            </Row>
+            <Column
+              customClassNames={[
+                classes.formFieldContainer,
+                classes.formFieldContainerTextArea,
+              ].join(' ')}
+            >
+              <textarea
+                id="message"
+                className={[classes.input, classes.textArea].join(' ')}
+                placeholder="Please leave a brief description"
+                maxLength={255 * 3}
+                value={formState.message}
+                onChange={value => onChangeHandler('message', value.target.value)}
+                required
+              />
+              <label htmlFor="message" className={classes.label}>
+                <Text size="medium">Message</Text>
+              </label>
+              {loading ? (
+                <Loader customClassNames={classes.loader} />
+              ) : (
+                <SubmitButton customButtonClassNames={classes.submitButton}>Submit</SubmitButton>
+              )}
+            </Column>
           </div>
-        </Section>
-      </CSSTransition>
-      <ThankYouModal show={showModal && show} onPress={onModalPress} />
+        </form>
+        <div className={classes.iconContainer}>
+          <IconContainer />
+        </div>
+      </Section>
+      <ThankYouModal show={showModal} onPress={onModalPress} />
     </>
   )
 }
