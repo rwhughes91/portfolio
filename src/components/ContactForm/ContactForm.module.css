@@ -21,15 +21,14 @@ div.iconBarHeader {
 
 .form {
   width: 100%;
-  height: 100vh;
   max-width: calc(var(--max-width) / 2);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   padding: 0 1rem;
-  z-index: 999;
   justify-content: flex-start;
+  animation: fadeIn 0.5s ease-out;
 }
 
 div.formFieldContainer {
@@ -170,7 +169,17 @@ div.loader {
     padding: 1rem;
   }
   textarea.input {
-    font-size: 1.6rem;
     padding: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

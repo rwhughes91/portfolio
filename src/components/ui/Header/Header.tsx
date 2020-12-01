@@ -5,12 +5,13 @@ interface Props {
   children: string | JSX.Element | (string | JSX.Element)[]
   styles?: React.CSSProperties
   inline?: boolean
+  customClassNames?: string
 }
 
-const Header: React.FC<Props> = ({ styles, children, inline }) => {
+const Header: React.FC<Props> = ({ styles, children, inline, customClassNames }) => {
   return (
     <h1
-      className={classes.header}
+      className={[classes.header, customClassNames].join(' ')}
       style={{ ...styles, display: inline ? 'inline-block' : 'block' }}
     >
       {children}

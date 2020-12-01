@@ -5,3 +5,7 @@
   border: none;
   text-shadow: none;
 }
+
+.LinkButton:focus {
+  outline: none;
+}

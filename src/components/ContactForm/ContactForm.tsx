@@ -20,7 +20,6 @@ const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [errorFlash, setErrorFlash] = useState(false)
   const [showModal, setShowModal] = useState(false)
-  const backRef = useRef<HTMLButtonElement | null>(null)
   const [formState, dispatch] = useReducer(reducer, initialState)
 
   const onChangeHandler = useCallback((field: 'name' | 'email' | 'message', value: string) => {
@@ -65,12 +64,6 @@ const ContactForm: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    if (backRef.current) {
-      backRef.current.focus()
-    }
-  }, [])
-
-  useEffect(() => {
     let timer: NodeJS.Timeout
     if (errorFlash) {
       timer = setTimeout(() => {
@@ -87,17 +80,13 @@ const ContactForm: React.FC = () => {
       <Section
         styles={{
           backgroundColor: 'var(--light-gray-2)',
-          position: 'fixed',
-          zIndex: 999,
-          top: 0,
-          left: 0,
         }}
         fill
       >
         <form className={classes.form} onSubmit={onSubmitHandler}>
           <Row customClassNames={classes.iconBarHeader}>
             <LinkButton to="/" custom>
-              <ArrowLeftIcon customRef={backRef} />
+              <ArrowLeftIcon />
             </LinkButton>
             <Text size="xLarge" bold customClassNames={classes.header}>
               Contact

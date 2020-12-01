@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Button from '@components/ui/Button/Button'
 import classes from './LinkButton.module.css'
+import { Link } from 'gatsby'
 
 interface Props {
   to: string

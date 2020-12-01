@@ -10,6 +10,16 @@
 div.headers {
   margin: auto 0;
 }
+.slideUp {
+  animation: moveInButton 0.5s ease-out;
+  animation-delay: 0.25s;
+  animation-fill-mode: backwards;
+}
+.fadeIn {
+  animation: fadeIn 1s ease-out;
+  animation-delay: 0.25s;
+  animation-fill-mode: backwards;
+}
 
 .button {
   margin-top: 3rem;
@@ -26,5 +36,23 @@ div.headers {
   .backgroundImage::before,
   .backgroundImage::after {
     background-attachment: fixed !important;
+  }
+}
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
