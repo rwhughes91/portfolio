@@ -16,6 +16,7 @@ const SdrArtistsImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="SDR Artists Page"
         draggable={false}
+        loading="eager"
       />
     </div>
   )

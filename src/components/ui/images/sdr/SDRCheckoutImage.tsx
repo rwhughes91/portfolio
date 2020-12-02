@@ -16,6 +16,7 @@ const SdrCheckoutImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="SDR Checkout Page"
         draggable={false}
+        loading="eager"
       />
     </div>
   )

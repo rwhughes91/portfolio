@@ -12,7 +12,12 @@ const SdrEventsImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={{ ...data.file.childImageSharp.fluid }} alt="SDR Events Page" draggable={false} />
+      <Img
+        fluid={{ ...data.file.childImageSharp.fluid }}
+        alt="SDR Events Page"
+        draggable={false}
+        loading="eager"
+      />
     </div>
   )
 }
