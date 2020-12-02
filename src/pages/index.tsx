@@ -52,8 +52,8 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
   return (
     <>
       <SEO
-        link={data.site?.siteMetadata?.link!}
-        title={data.site?.siteMetadata?.title!}
+        link={data.site?.siteMetadata?.link || ''}
+        title={data.site?.siteMetadata?.title || ''}
         body="home"
       />
       <HomeScene onScrollHandler={onScrollHandler} />

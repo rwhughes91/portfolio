@@ -17,8 +17,6 @@ div.headers {
 }
 .fadeIn {
   animation: fadeIn 1s ease-out;
-  animation-delay: 0.25s;
-  animation-fill-mode: backwards;
 }
 
 .button {

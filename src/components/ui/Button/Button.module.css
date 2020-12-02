@@ -49,9 +49,6 @@ span.buttonText {
 }
 
 @media (min-width: 1800px) {
-  .header {
-    font-size: 1.8rem;
-  }
   .large {
     font-size: 2rem;
   }

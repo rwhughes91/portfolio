@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useReducer, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useReducer, useState } from 'react'
 import emailjs from 'emailjs-com'
 import { CSSTransition } from 'react-transition-group'
 import classes from './ContactForm.module.css'

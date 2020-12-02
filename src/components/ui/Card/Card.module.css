@@ -61,6 +61,6 @@ span.description {
 
 @media (min-width: 1800px) {
   .card {
-    max-width: 30rem;
+    max-width: 32rem;
   }
 }

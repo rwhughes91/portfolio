@@ -9,8 +9,8 @@ const ContactPage: React.FC<{ data: GetMetadataContactPageQuery }> = ({ data }) 
   return (
     <>
       <SEO
-        link={data.site?.siteMetadata?.linkContact!}
-        title={data.site?.siteMetadata?.contactTitle!}
+        link={data.site?.siteMetadata?.linkContact || ''}
+        title={data.site?.siteMetadata?.contactTitle || ''}
         body="contact"
       />
       <ContactForm />
