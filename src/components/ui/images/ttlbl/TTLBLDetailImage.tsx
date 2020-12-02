@@ -16,6 +16,7 @@ const TTLBLDetailImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="New Jersey Database Detail Page"
         draggable={false}
+        loading="eager"
       />
     </div>
   )

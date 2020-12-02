@@ -12,7 +12,12 @@ const LJPCHomeImage: React.FC<Props> = ({ styles, customClassNames }) => {
   const classNames = [customClassNames]
   return (
     <div className={classNames.join(' ')} style={styles}>
-      <Img fluid={{ ...data.file.childImageSharp.fluid }} alt="LJPC Home Page" draggable={false} />
+      <Img
+        fluid={{ ...data.file.childImageSharp.fluid }}
+        alt="LJPC Home Page"
+        draggable={false}
+        loading="eager"
+      />
     </div>
   )
 }

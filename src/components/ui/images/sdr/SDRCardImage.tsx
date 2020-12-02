@@ -16,7 +16,6 @@ const SdrCardImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid, aspectRatio: 1.5 }}
         alt="SDR Card"
         draggable={false}
-        loading="eager"
       />
     </div>
   )

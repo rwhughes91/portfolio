@@ -16,6 +16,7 @@ const ColorngTwoImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="Colorng Created and Search Pages"
         draggable={false}
+        loading="eager"
       />
     </div>
   )

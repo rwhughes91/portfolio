@@ -16,6 +16,7 @@ const TTLBLSearchImage: React.FC<Props> = ({ styles, customClassNames }) => {
         fluid={{ ...data.file.childImageSharp.fluid }}
         alt="New Jersey Database Search Page"
         draggable={false}
+        loading="eager"
       />
     </div>
   )
