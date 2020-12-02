@@ -6,9 +6,10 @@ import favicon from '@images/favicon.png'
 interface Props {
   title: string
   link: string
+  body: 'home' | 'contact'
 }
 
-const SEO: React.FC<Props> = ({ title, link }) => {
+const SEO: React.FC<Props> = ({ title, link, body }) => {
   return (
     <Helmet>
       <html lang="en" />
@@ -20,6 +21,7 @@ const SEO: React.FC<Props> = ({ title, link }) => {
       <title>{title}</title>
       <link rel="canonical" href={link} />
       <link rel="icon" href={favicon} />
+      <body className={body} />
     </Helmet>
   )
 }

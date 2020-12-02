@@ -101,6 +101,7 @@ div.row {
 .form button.submitButton,
 div.loader {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .iconContainer {
@@ -124,6 +125,7 @@ div.loader {
   .form button.submitButton,
   div.loader {
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .formFields {
     margin-top: 3rem;

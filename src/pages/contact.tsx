@@ -11,6 +11,7 @@ const ContactPage: React.FC<{ data: GetMetadataContactPageQuery }> = ({ data }) 
       <SEO
         link={data.site?.siteMetadata?.linkContact!}
         title={data.site?.siteMetadata?.contactTitle!}
+        body="contact"
       />
       <ContactForm />
     </>

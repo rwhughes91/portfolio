@@ -77,12 +77,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <>
-      <Section
-        styles={{
-          backgroundColor: 'var(--light-gray-2)',
-        }}
-        fill
-      >
+      <Section>
         <form className={classes.form} onSubmit={onSubmitHandler}>
           <Row customClassNames={classes.iconBarHeader}>
             <LinkButton to="/" custom>
