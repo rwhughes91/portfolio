@@ -23,13 +23,20 @@ body {
   scrollbar-width: none;
 }
 
+body.home {
+  background-color: var(--light-gray-1);
+}
+
+body.contact {
+  background-color: var(--light-gray-2);
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
 
 html {
   font-size: 10px;
-  background-color: var(--light-gray-1);
   scroll-behavior: smooth;
   line-height: 1.6;
 }

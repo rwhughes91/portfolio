@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './ContactScene.module.css'
 import Text from '@components/ui/Text/Text'
-import Button from '@components/ui/Button/Button'
+import LinkButton from '@components/ui/LinkButton/LinkButton'
 import Row from '@components/Layout/Row/Row'
 import Column from '@components/Layout/Column/Column'
 
@@ -12,10 +12,9 @@ import ResumeIcon from '@components/ui/icons/Resume/Resume'
 
 interface Props {
   customRef?: React.MutableRefObject<HTMLDivElement | null>
-  onPress: () => void
 }
 
-const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
+const ContactScene: React.FC<Props> = ({ customRef }) => {
   return (
     <div className={classes.container}>
       <Row customClassNames={classes.contactMe}>
@@ -25,9 +24,9 @@ const ContactScene: React.FC<Props> = ({ customRef, onPress }) => {
         <Text size="medium" customClassNames={[classes.contactMeText, classes.pad].join(' ')}>
           Have a question or want to work together?
         </Text>
-        <Button size="medium" onPress={onPress}>
+        <LinkButton size="medium" to="/contact">
           Reach out
-        </Button>
+        </LinkButton>
       </Row>
       <footer className={classes.content}>
         <Column customClassNames={classes.column}>

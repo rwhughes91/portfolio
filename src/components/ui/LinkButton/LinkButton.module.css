@@ -1,0 +1,11 @@
+.LinkButton {
+  display: block;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-shadow: none;
+}
+
+.LinkButton:focus {
+  outline: none;
+}

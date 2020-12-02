@@ -21,30 +21,30 @@ div.iconBarHeader {
 
 .form {
   width: 100%;
-  height: 100vh;
   max-width: calc(var(--max-width) / 2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin: 0;
   padding: 0 1rem;
-  z-index: 999;
-  margin-top: -5rem;
+  justify-content: flex-start;
+  animation: fadeIn 0.5s ease-out;
 }
 
 div.formFieldContainer {
   width: 100%;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 div.formFieldContainer.formFieldContainerTextArea {
   width: 100%;
+  margin-bottom: 0;
 }
 
 .formFields {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .input {
@@ -58,11 +58,15 @@ div.formFieldContainer.formFieldContainerTextArea {
   font-size: 1.8rem;
   color: var(--dark-blue-2);
   background-color: var(--light-gray-2);
+  padding: 0.75rem;
 }
 
 .textArea {
   resize: vertical;
   width: 100%;
+  height: 15rem;
+  min-height: 12rem;
+  max-height: 35rem;
 }
 
 .label {
@@ -94,8 +98,51 @@ div.row {
   justify-content: space-between;
 }
 
+.form button.submitButton,
+div.loader {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .iconContainer {
   display: none;
+}
+
+@media (min-height: 425px) {
+  .input {
+    padding: 1rem;
+  }
+}
+
+@media (min-height: 550px) {
+  div.headerContainer {
+    margin-bottom: 3rem;
+    display: block;
+  }
+  div.formFieldContainer {
+    margin-bottom: 3rem;
+  }
+  .form button.submitButton,
+  div.loader {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .formFields {
+    margin-top: 3rem;
+  }
+  .label {
+    top: -2.5rem;
+    opacity: 1;
+  }
+}
+
+@media (min-height: 600px) {
+  .input {
+    padding: 1.25rem;
+  }
+  .textArea {
+    height: 20rem;
+  }
 }
 
 @media (min-width: 500px) {
@@ -107,77 +154,34 @@ div.row {
   }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 700px) and (min-height: 700px) {
+  .form {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width: 950px) {
   .iconContainer {
     display: block;
-  }
-  div.formFieldContainer {
-    margin-bottom: 3rem;
-  }
-  .input {
-    padding: 1rem;
   }
 }
 
 @media (min-width: 1800px) {
-  input.input,
+  .input {
+    padding: 1rem;
+  }
   textarea.input {
-    font-size: 1.6rem;
     padding: 1rem;
   }
 }
 
-@media (min-height: 425px) {
-  .input {
-    padding: 1rem;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
   }
-  .textArea {
-    min-height: 10rem;
-  }
-  .form {
-    margin-top: 0;
-  }
-  .form button.submitButton,
-  div.loader {
-    margin-top: 1.5rem;
-  }
-  div.formFieldContainer {
-    margin-bottom: 3rem;
-  }
-  .form {
-    justify-content: flex-start;
-  }
-  .label {
-    top: -2.5rem;
+  to {
     opacity: 1;
-  }
-}
-
-@media (min-height: 450px) and (min-width: 500px) {
-  div.headerContainer {
-    margin-bottom: 3rem;
-    display: block;
-  }
-}
-
-@media (min-height: 585px) {
-  div.iconBarHeader {
-    margin-bottom: 5rem;
-  }
-  .form button.submitButton,
-  div.loader {
-    margin-top: 4rem;
-  }
-  .form {
-    height: 100%;
-  }
-  .input {
-    padding: 1.5rem;
-  }
-  .textArea {
-    min-height: 16rem;
-  }
-  .formFields {
-    margin-top: 0;
+    transform: translateY(0);
   }
 }
