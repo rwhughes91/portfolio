@@ -23,8 +23,9 @@
   justify-content: center;
   align-items: center;
   padding: 3rem 1.5rem;
-  transition: opacity 0.4s ease-in;
+  transition: all 0.4s ease-in;
   opacity: 0;
+  visibility: hidden;
   background-color: var(--dark-blue-2);
   overflow: hidden;
 }
@@ -45,6 +46,7 @@ span.description {
 }
 .card:hover .caption {
   opacity: 1;
+  visibility: visible;
 }
 
 .show {
