@@ -22,6 +22,7 @@ const ProjectsScene: React.FC = () => {
               description="A record label e-commerce web application that primarily manages metal, punk, and hard rock bands. This app also includes an admin interface (inspired by django-admin) to easily manage and add data."
               tech="JavaScript/TypeScript, React, Next.js, Apollo Micro Server (GraphQL), Firebase, Stripe, SendGrid/Twilio, AWS S3, AWS CloudFront, SCSS, CSS Modules, PostCSS, Webpack, Babel, Jest, Vercel"
               url="https://super-delicious-records.vercel.app/"
+              customClassNames={classes.sdr}
             />
             <Card
               image="colorng"
@@ -34,6 +35,7 @@ const ProjectsScene: React.FC = () => {
                 ' Please contact me if you have any questions!',
               ]}
               url="https://expo.io/@rwhughes91/projects/colorNg"
+              customClassNames={classes.colorng}
             />
             <Card
               image="ttlbl"
@@ -46,6 +48,7 @@ const ProjectsScene: React.FC = () => {
                 ' Please contact me if you wish to see a demo.',
               ]}
               url="https://new-jersey-database.herokuapp.com/"
+              customClassNames={classes.njtl}
             />
             <Card
               image="odt"
@@ -53,6 +56,7 @@ const ProjectsScene: React.FC = () => {
               description="A static site built with react for Odonate Therapeutics, a public pharmaceutical company."
               shortDescription="A static react app for Odonate Therapeutics."
               url="https://www.odonate.com/"
+              customClassNames={classes.odt}
             />
             <Card
               image="ljpc"
@@ -60,6 +64,7 @@ const ProjectsScene: React.FC = () => {
               description="A static site built with react for La Jolla Pharmaceutical Company, a public pharmaceutical company."
               shortDescription="A static react app for La Jolla Pharmaceutical Company."
               url="https://www.lajollapharmaceutical.com/"
+              customClassNames={classes.ljpc}
             />
             <Card
               image="drugCurves"
@@ -68,6 +73,7 @@ const ProjectsScene: React.FC = () => {
               shortDescription="A python project that organizes, analyzes, and generates pdf reports for several drug markets."
               tech="Python 3, SQLite, Peewee, Pandas, NumPy, Matplotlib, XlsxWriter, HTML5, CSS3, Babel, Selenium, Unittest, Jupyter Notebook, IPython"
               url=""
+              customClassNames={classes.drugCurves}
             />
           </Row>
         </div>

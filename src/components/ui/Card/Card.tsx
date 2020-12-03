@@ -24,9 +24,19 @@ interface Props {
   url: string
   tech?: string
   auth?: [string, string]
+  customClassNames?: string
 }
 
-const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescription, auth }) => {
+const Card: React.FC<Props> = ({
+  description,
+  image,
+  url,
+  name,
+  tech,
+  shortDescription,
+  auth,
+  customClassNames,
+}) => {
   const buttonElementRef = useRef<HTMLButtonElement | null>(null)
   const [showModal, setShowModal] = useState(false)
 
@@ -96,7 +106,7 @@ const Card: React.FC<Props> = ({ description, image, url, name, tech, shortDescr
 
   return (
     <>
-      <figure className={classes.card}>
+      <figure className={[classes.card, customClassNames].join(' ')}>
         <figcaption className={[classes.caption, show ? classes.show : null].join(' ')}>
           <Text size="medium" customClassNames={classes.description}>
             {shortDescription}
