@@ -8,12 +8,17 @@ interface Props {
   size?: 'small' | 'medium' | 'large'
   children: string | JSX.Element
   custom?: boolean
+  customClassNames?: string
 }
 
-const LinkButton: React.FC<Props> = ({ to, children, size, custom }) => {
+const LinkButton: React.FC<Props> = ({ to, children, size, custom, customClassNames }) => {
   return (
     <Link to={to} className={classes.LinkButton}>
-      {!custom && <Button size={size!}>{children as string}</Button>}
+      {!custom && (
+        <Button size={size!} customButtonClassNames={customClassNames}>
+          {children as string}
+        </Button>
+      )}
       {custom && children}
     </Link>
   )
