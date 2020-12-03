@@ -5,14 +5,16 @@ import Column from '@components/Layout/Column/Column'
 import Row from '@components/Layout/Row/Row'
 import Card from '@components/ui/Card/Card'
 import HeaderText from '@components/ui/HeaderText/HeaderText'
+import { useInView } from 'react-intersection-observer'
 
 const ProjectsScene: React.FC = () => {
+  const { ref, inView } = useInView({ threshold: 0.75, triggerOnce: true })
   return (
     <Section pad styles={{ backgroundColor: 'var(--light-gray-1)' }}>
       <Column customClassNames={classes.container}>
         <HeaderText>Recent Projects</HeaderText>
-        <div className={classes.content}>
-          <Row customClassNames={classes.cards}>
+        <div className={classes.content} ref={ref}>
+          <Row customClassNames={[classes.cards, inView && classes.view].join(' ')}>
             <Card
               image="sdr"
               name="Super Delicious Records"
