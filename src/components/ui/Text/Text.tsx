@@ -7,7 +7,9 @@ interface Props {
   bold?: boolean
   size: 'small' | 'medium' | 'large' | 'xSmall' | 'xLarge' | 'header'
   customClassNames?: string
-  customRef?: React.MutableRefObject<HTMLSpanElement | null>
+  customRef?:
+    | React.MutableRefObject<HTMLSpanElement | null>
+    | ((node?: Element | null | undefined) => void)
   ariaHidden?: boolean
 }
 
