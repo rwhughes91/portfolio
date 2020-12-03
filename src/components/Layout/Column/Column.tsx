@@ -5,7 +5,9 @@ interface Props {
   children: any
   styles?: React.CSSProperties
   customClassNames?: string
-  customRef?: React.MutableRefObject<HTMLDivElement | null>
+  customRef?:
+    | React.MutableRefObject<HTMLDivElement | null>
+    | ((node?: Element | null | undefined) => void)
 }
 
 const Column: React.FC<Props> = ({ styles, children, customClassNames, customRef }) => {

@@ -45,11 +45,6 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-@media (max-width: 900px) {
-  html {
-    font-size: 8px;
-  }
-}
 @media (max-width: 1200px) {
   html {
     font-size: 9px;

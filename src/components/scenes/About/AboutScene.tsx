@@ -8,6 +8,7 @@ import Text from '@components/ui/Text/Text'
 import ImageContainer from '@components/ui/ImageContainer/ImageContainer'
 import List from '@components/ui/List/List'
 import HeaderText from '@components/ui/HeaderText/HeaderText'
+import { useInView } from 'react-intersection-observer'
 
 import { GetAboutUsDataQuery } from '../../../../graphql-types'
 
@@ -16,6 +17,17 @@ interface Props {
 }
 
 const AboutScreen: React.FC<Props> = ({ customRef }) => {
+  const { ref: textRef, inView: inViewText } = useInView({ threshold: 0.5, triggerOnce: true })
+  const { ref: introRef, inView: inViewIntro } = useInView({ threshold: 1, triggerOnce: true })
+  const { ref: textRefTech, inView: inViewTextTech } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  })
+  const { ref: collageRef, inView: inViewCollage } = useInView({
+    threshold: 0.75,
+    triggerOnce: true,
+  })
+
   const data: GetAboutUsDataQuery = useStaticQuery(query)
 
   const techTags = data.allDataJson.nodes[0].languages!.concat(
@@ -32,19 +44,42 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
         <HeaderText>About</HeaderText>
         <Row customClassNames={classes.row}>
           <Column customClassNames={[classes.column, classes.pad].join(' ')}>
-            <Text size="medium" bold customClassNames={classes.text}>
+            <Text
+              size="medium"
+              bold
+              customClassNames={[classes.text, inViewIntro ? classes.viewLeft : classes.hide].join(
+                ' '
+              )}
+              customRef={introRef}
+            >
               {data.allDataJson.nodes[0].introduction as string}
             </Text>
-            <Text size="medium" customClassNames={[classes.text, classes.marginVertical].join(' ')}>
-              {data.allDataJson.nodes[0].header as string}
-            </Text>
-            <Text size="medium" customClassNames={classes.text}>
-              {data.allDataJson.nodes[0].body as string}
-            </Text>
-            <Text size="medium" customClassNames={[classes.text, classes.marginVertical].join(' ')}>
-              {data.allDataJson.nodes[0].footer as string}
-            </Text>
-            <div className={classes.column}>
+            <div
+              ref={textRef}
+              className={[classes.column, inViewText ? classes.viewLeft : classes.hide].join(' ')}
+            >
+              <Text
+                size="medium"
+                customClassNames={[classes.text, classes.marginVertical].join(' ')}
+              >
+                {data.allDataJson.nodes[0].header as string}
+              </Text>
+              <Text size="medium" customClassNames={classes.text}>
+                {data.allDataJson.nodes[0].body as string}
+              </Text>
+              <Text
+                size="medium"
+                customClassNames={[classes.text, classes.marginVertical].join(' ')}
+              >
+                {data.allDataJson.nodes[0].footer as string}
+              </Text>
+            </div>
+            <div
+              className={[classes.column, inViewTextTech ? classes.viewLeft : classes.hide].join(
+                ' '
+              )}
+              ref={textRefTech}
+            >
               <Text
                 size="medium"
                 bold
@@ -57,7 +92,13 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
             </div>
           </Column>
           <Column
-            customClassNames={[classes.column, classes.padImage, classes.imageColumn].join(' ')}
+            customRef={collageRef}
+            customClassNames={[
+              classes.column,
+              classes.padImage,
+              classes.imageColumn,
+              inViewCollage ? classes.viewRight : classes.hide,
+            ].join(' ')}
           >
             <ImageContainer collage />
           </Column>

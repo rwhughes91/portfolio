@@ -1,24 +1,4 @@
 span.marginBottom {
   margin-bottom: 5rem;
   text-align: center;
-  opacity: 0;
-}
-
-span.marginBottom.view {
-  animation: moveInRight 1s ease-out;
-  opacity: 1;
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
