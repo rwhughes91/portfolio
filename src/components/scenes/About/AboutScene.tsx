@@ -23,10 +23,6 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
     threshold: 0.5,
     triggerOnce: true,
   })
-  const { ref: collageRef, inView: inViewCollage } = useInView({
-    threshold: 0.75,
-    triggerOnce: true,
-  })
 
   const data: GetAboutUsDataQuery = useStaticQuery(query)
 
@@ -92,13 +88,7 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
             </div>
           </Column>
           <Column
-            customRef={collageRef}
-            customClassNames={[
-              classes.column,
-              classes.padImage,
-              classes.imageColumn,
-              inViewCollage ? classes.viewRight : classes.hide,
-            ].join(' ')}
+            customClassNames={[classes.column, classes.padImage, classes.imageColumn].join(' ')}
           >
             <ImageContainer collage />
           </Column>

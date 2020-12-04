@@ -65,6 +65,16 @@ div.image {
   }
 }
 
+@media (min-width: 1200px) {
+  .view {
+    animation: moveInRight 0.4s ease-out;
+    opacity: 1;
+  }
+  .hide {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 1280px) {
   div.imageCollage {
     max-width: 35rem;
@@ -88,5 +98,16 @@ div.image {
   }
   div.imageCollage {
     max-width: 35rem;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

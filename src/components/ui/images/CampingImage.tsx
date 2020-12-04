@@ -5,13 +5,14 @@ import Img from 'gatsby-image'
 interface Props {
   styles?: React.CSSProperties
   customClassNames?: string
+  customRef?: (node?: Element | null | undefined) => void
 }
 
-const CampingImage: React.FC<Props> = ({ styles, customClassNames }) => {
+const CampingImage: React.FC<Props> = ({ styles, customClassNames, customRef }) => {
   const data = useStaticQuery(campingQuery)
   const classNames = [customClassNames]
   return (
-    <div className={classNames.join(' ')} style={styles}>
+    <div className={classNames.join(' ')} style={styles} ref={customRef}>
       <Img
         fluid={data.file.childImageSharp.fluid}
         alt="Camping Image of Emelia and Marlow"

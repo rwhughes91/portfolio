@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './ImageContainer.module.css'
+import { useInView } from 'react-intersection-observer'
 
 import CampingImage from '@components/ui/images/CampingImage'
 import MarlowImage from '@components/ui/images/MarlowImage'
@@ -12,6 +13,19 @@ interface Props {
 }
 
 const ImageContainer: React.FC<Props> = ({ collage, customRef, inView }) => {
+  const { ref: firstImageRef, inView: inViewFirstImage } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  })
+  const { ref: secondImageRef, inView: inViewSecondImage } = useInView({
+    threshold: 0.75,
+    triggerOnce: true,
+  })
+  const { ref: thirdImageRef, inView: inViewThirdImage } = useInView({
+    threshold: 0.75,
+    triggerOnce: true,
+  })
+
   return (
     <div
       ref={customRef}
@@ -19,27 +33,30 @@ const ImageContainer: React.FC<Props> = ({ collage, customRef, inView }) => {
     >
       <div className={classes.composition}>
         <CampingImage
+          customRef={firstImageRef}
           customClassNames={[
             classes.image,
             classes.firstImage,
             collage ? classes.imageCollage : null,
-            inView ? classes.inView : null,
+            inViewFirstImage ? classes.view : classes.hide,
           ].join(' ')}
         />
         <MarlowImage
+          customRef={secondImageRef}
           customClassNames={[
             classes.image,
             classes.secondImage,
             collage ? classes.imageCollage : null,
-            inView ? classes.inView : null,
+            inViewSecondImage ? classes.view : classes.hide,
           ].join(' ')}
         />
         <FlowerImage
+          customRef={thirdImageRef}
           customClassNames={[
             classes.image,
             classes.thirdImage,
             collage ? classes.imageCollage : null,
-            inView ? classes.inView : null,
+            inViewThirdImage ? classes.view : classes.hide,
           ].join(' ')}
         />
       </div>
