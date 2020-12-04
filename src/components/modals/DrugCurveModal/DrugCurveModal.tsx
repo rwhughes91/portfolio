@@ -1,6 +1,6 @@
 import React from 'react'
 import CardModal from '@components/CardModal/CardModal'
-import PDFIcon from '@components/ui/icons/PDF/PDF'
+import DownloadIcon from '@components/ui/icons/Download/Download'
 import classes from './DrugCurveModal.module.css'
 
 import Alk from '@pdfs/alk.pdf'
@@ -30,9 +30,9 @@ const DrugCurveModal: React.FC<Props> = ({
 }) => {
   const icons = (
     <div className={classes.icons}>
-      <PDFIcon label="Alk..." href={Alk} />
-      <PDFIcon label="Nor.." href={Norepinephrine} />
-      <PDFIcon label="Vaso.." href={Vasopressin} />
+      <DownloadIcon label="Alk..." href={Alk} />
+      <DownloadIcon label="Nor.." href={Norepinephrine} />
+      <DownloadIcon label="Vaso.." href={Vasopressin} />
     </div>
   )
   return (
