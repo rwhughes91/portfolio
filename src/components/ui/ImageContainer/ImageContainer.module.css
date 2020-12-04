@@ -33,15 +33,13 @@ div.image {
 
   div.imageCollage {
     position: absolute;
-    will-change: transform, z-index, box-shadow, outline;
-    outline-offset: 2rem;
+    will-change: transform, z-index, box-shadow;
   }
   div.imageCollage:hover {
     backface-visibility: hidden;
     z-index: 10;
     transform: scale(1.05) translateZ(0) translateY(-0.5rem) rotate(0.01deg);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-    outline: 1.5rem solid var(--dark-blue-2);
   }
 
   div.imageCollage.firstImage {
