@@ -8,7 +8,6 @@ import EmailIcon from '@components/ui/icons/Email/Email'
 import GithubIcon from '@components/ui/icons/Github/Github'
 import LinkedInIcon from '@components/ui/icons/LinkedIn/LinkedIn'
 import PlusIcon from '@components/ui/icons/Plus/Plus'
-import ArrowUpIcon from '@components/ui/icons/ArrowUp/ArrowUp'
 
 interface Props {
   arrow?: boolean
@@ -41,15 +40,6 @@ const IconContainer: React.FC<Props> = ({ arrow, onPress, hide }) => {
   return (
     <Column customClassNames={[classes.fixed, hide ? classes.main : null].join(' ')}>
       {iconBar}
-      <ArrowUpIcon
-        onPress={onPress}
-        tabIndex={arrow ? undefined : -1}
-        customClassNames={[
-          classes.margin,
-          arrow ? classes.showArrow : classes.hideArrow,
-          arrow ? classes.showArrowIcon : classes.hideArrowIcon,
-        ].join(' ')}
-      />
       <PlusIcon
         onPress={toggleIconsHandler}
         customClassNames={[classes.margin, classes.plus].join(' ')}

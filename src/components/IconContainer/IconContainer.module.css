@@ -33,32 +33,6 @@ button.margin {
   display: none;
 }
 
-div.showArrow,
-button.showArrow {
-  transition: all 0.2s;
-  top: 0;
-  position: relative;
-  z-index: 2;
-}
-
-div.hideArrow,
-button.hideArrow {
-  transition: all 0.2s;
-  position: relative;
-  top: 7rem;
-  z-index: 2;
-}
-
-button.showArrowIcon {
-  opacity: 1;
-  background: var(--light-gray-1);
-}
-
-button.hideArrowIcon {
-  opacity: 0;
-  pointer-events: none;
-}
-
 button.plus {
   z-index: 2;
   box-shadow: 0 0 0 0.15rem rgba(233, 236, 239, 0.25) !important;
@@ -77,18 +51,5 @@ button.plus {
     visibility: hidden;
     pointer-events: none;
     transform: translateX(4rem);
-  }
-}
-
-@media (min-width: 1200px) {
-  div.hideArrow,
-  button.hideArrow {
-    top: 6.05rem;
-  }
-}
-@media (min-width: 1800px) {
-  div.hideArrow,
-  button.hideArrow {
-    top: 5.5rem;
   }
 }

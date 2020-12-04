@@ -13,7 +13,6 @@ import { GetMetadataQuery } from '../../graphql-types'
 const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
   const aboutSectionRef = useRef<HTMLDivElement | null>(null)
   const iconRef = useRef<HTMLDivElement | null>(null)
-  const [showArrowIcon, setShowArrowIcon] = useState(false)
   const [showIcons, setShowIcons] = useState(false)
 
   const onScrollHandler = useCallback(() => {
@@ -24,15 +23,6 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
 
   useEffect(() => {
     const onScrollWindowHandler = debounce(() => {
-      if (
-        iconRef.current &&
-        iconRef.current.getBoundingClientRect().top <= window.innerHeight &&
-        iconRef.current.getBoundingClientRect().top !== 0
-      ) {
-        setShowArrowIcon(true)
-      } else {
-        setShowArrowIcon(false)
-      }
       if (
         aboutSectionRef.current &&
         window.pageYOffset >= aboutSectionRef.current.offsetTop / 2.5
@@ -60,7 +50,7 @@ const Home: React.FC<{ data: GetMetadataQuery }> = ({ data }) => {
       <AboutScene customRef={aboutSectionRef} />
       <ProjectsScene />
       <ContactScene customRef={iconRef} />
-      <IconContainer arrow={showArrowIcon} onPress={onScrollHandler} hide={!showIcons} />
+      <IconContainer onPress={onScrollHandler} hide={!showIcons} />
     </>
   )
 }
