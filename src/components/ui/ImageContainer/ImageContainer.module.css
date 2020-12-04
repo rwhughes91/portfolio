@@ -23,7 +23,7 @@ div.image {
 
 @media (min-width: 1120px) {
   .imageContainerCollage {
-    height: 30rem;
+    height: 34rem;
   }
 
   .composition:hover div.image:not(:hover) {
