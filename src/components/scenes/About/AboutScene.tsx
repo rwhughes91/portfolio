@@ -17,10 +17,10 @@ interface Props {
 }
 
 const AboutScreen: React.FC<Props> = ({ customRef }) => {
-  const { ref: textRef, inView: inViewText } = useInView({ threshold: 0.5, triggerOnce: true })
+  const { ref: textRef, inView: inViewText } = useInView({ threshold: 0.75, triggerOnce: true })
   const { ref: introRef, inView: inViewIntro } = useInView({ threshold: 1, triggerOnce: true })
   const { ref: textRefTech, inView: inViewTextTech } = useInView({
-    threshold: 0.5,
+    threshold: 0.75,
     triggerOnce: true,
   })
 

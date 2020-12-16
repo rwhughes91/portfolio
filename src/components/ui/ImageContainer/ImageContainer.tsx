@@ -14,15 +14,15 @@ interface Props {
 
 const ImageContainer: React.FC<Props> = ({ collage, customRef, inView }) => {
   const { ref: firstImageRef, inView: inViewFirstImage } = useInView({
-    threshold: 0.5,
+    threshold: 0.75,
     triggerOnce: true,
   })
   const { ref: secondImageRef, inView: inViewSecondImage } = useInView({
-    threshold: 0.75,
+    threshold: 1,
     triggerOnce: true,
   })
   const { ref: thirdImageRef, inView: inViewThirdImage } = useInView({
-    threshold: 0.75,
+    threshold: 1,
     triggerOnce: true,
   })
 

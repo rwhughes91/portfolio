@@ -8,7 +8,7 @@ import HeaderText from '@components/ui/HeaderText/HeaderText'
 import { useInView } from 'react-intersection-observer'
 
 const ProjectsScene: React.FC = () => {
-  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true })
+  const { ref, inView } = useInView({ threshold: 0.75, triggerOnce: true })
   return (
     <Section pad styles={{ backgroundColor: 'var(--light-gray-1)' }}>
       <Column customClassNames={classes.container}>
