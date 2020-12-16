@@ -114,6 +114,9 @@
   .icon {
     padding: 1.75rem;
   }
+  .pdfIcon {
+    width: 9rem;
+  }
   .small {
     padding: 1.5rem;
   }
@@ -122,6 +125,9 @@
 @media (min-width: 1800px) {
   .icon {
     padding: 1.6rem;
+  }
+  .pdfIcon {
+    width: 8rem;
   }
   .small {
     padding: 1.35rem;
