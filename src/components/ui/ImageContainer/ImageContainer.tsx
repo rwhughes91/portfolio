@@ -9,10 +9,9 @@ import FlowerImage from '@components/ui/images/FlowerImage'
 interface Props {
   collage?: boolean
   customRef?: (node?: Element | null | undefined) => void
-  inView?: boolean
 }
 
-const ImageContainer: React.FC<Props> = ({ collage, customRef, inView }) => {
+const ImageContainer: React.FC<Props> = ({ collage, customRef }) => {
   const { ref: firstImageRef, inView: inViewFirstImage } = useInView({
     threshold: 0.75,
     triggerOnce: true,

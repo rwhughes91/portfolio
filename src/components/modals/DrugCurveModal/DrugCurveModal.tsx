@@ -1,11 +1,10 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import CardModal from '@components/CardModal/CardModal'
 import DownloadIcon from '@components/ui/icons/Download/Download'
 import classes from './DrugCurveModal.module.css'
 
-import Alk from '@pdfs/alk.pdf'
-import Norepinephrine from '@pdfs/norepinephrine.pdf'
-import Vasopressin from '@pdfs/vasopressin.pdf'
+import { GetPdfLinksQuery } from '../../../../graphql-types'
 
 interface Props {
   show: boolean
@@ -28,11 +27,15 @@ const DrugCurveModal: React.FC<Props> = ({
   auth,
   shortDescription,
 }) => {
+  const data: GetPdfLinksQuery = useStaticQuery(query)
+
+  const { alk, nor, vaso } = data.allDataJson.nodes[0].links!
+
   const icons = (
     <div className={classes.icons}>
-      <DownloadIcon label="Alk..." href={Alk} />
-      <DownloadIcon label="Nor.." href={Norepinephrine} />
-      <DownloadIcon label="Vaso.." href={Vasopressin} />
+      <DownloadIcon label="Alk..." href={alk!} />
+      <DownloadIcon label="Nor.." href={nor!} />
+      <DownloadIcon label="Vaso.." href={vaso!} />
     </div>
   )
   return (
@@ -52,3 +55,17 @@ const DrugCurveModal: React.FC<Props> = ({
 }
 
 export default React.memo(DrugCurveModal)
+
+const query = graphql`
+  query getPdfLinks {
+    allDataJson {
+      nodes {
+        links {
+          alk
+          nor
+          vaso
+        }
+      }
+    }
+  }
+`
