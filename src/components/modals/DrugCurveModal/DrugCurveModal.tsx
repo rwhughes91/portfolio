@@ -30,10 +30,7 @@ const DrugCurveModal: React.FC<Props> = ({
 }) => {
   const icons = (
     <div className={classes.icons}>
-      <DownloadIcon
-        label="Alk..."
-        href="https://rh-portfolio-13328.s3-us-west-1.amazonaws.com/alk.pdf"
-      />
+      <DownloadIcon label="Alk..." href={Alk} />
       <DownloadIcon label="Nor.." href={Norepinephrine} />
       <DownloadIcon label="Vaso.." href={Vasopressin} />
     </div>
