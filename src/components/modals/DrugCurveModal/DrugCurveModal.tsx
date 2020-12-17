@@ -33,9 +33,9 @@ const DrugCurveModal: React.FC<Props> = ({
 
   const icons = (
     <div className={classes.icons}>
-      <DownloadIcon label="Alk..." href={alk!} />
-      <DownloadIcon label="Nor.." href={nor!} />
-      <DownloadIcon label="Vaso.." href={vaso!} />
+      <DownloadIcon label="Alk" href={alk!} />
+      <DownloadIcon label="Nor" href={nor!} />
+      <DownloadIcon label="Vaso" href={vaso!} />
     </div>
   )
   return (
