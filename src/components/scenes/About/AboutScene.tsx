@@ -28,8 +28,8 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
 
   const techTags = data.allDataJson.nodes[0].languages!.concat(
     data.allDataJson.nodes[0].js as string[],
-    data.allDataJson.nodes[0].server as string[],
     data.allDataJson.nodes[0].web as string[],
+    data.allDataJson.nodes[0].server as string[],
     data.allDataJson.nodes[0].databases as string[],
     data.allDataJson.nodes[0].tools as string[]
   )

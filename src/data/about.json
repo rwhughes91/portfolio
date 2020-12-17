@@ -11,7 +11,7 @@
   "footer": "I also enjoy watching sports, going on hikes, and corgis!",
   "languages": ["JavaScript/TypeScript", "Python 3"],
   "js": [
-    "React",
+    "React/Redux",
     "React Native",
     "Next",
     "Gatsby",
@@ -30,7 +30,7 @@
     "REST",
     "Graphql"
   ],
-  "web": ["CSS3/SCSS", "HTML5"],
+  "web": ["HTML5", "CSS3/SCSS"],
   "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma"],
   "tools": ["Linux", "AWS", "Docker", "Git", "Github", "Webpack", "Babel", "PostCSS", "Figma"]
 }
