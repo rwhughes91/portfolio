@@ -69,7 +69,7 @@ const ProjectsScene: React.FC = () => {
             <Card
               image="drugCurves"
               name="Drug Curves"
-              description="A Python project that organizes, analyzes, and generates pdf reports for several U.S. drug markets, including ALK inhibitors, metastatic breast cancer drugs, norepinephrine and vasopressin, oral iron chelators, NK1 receptor antagonists and 5-HT3 receptor antagonists."
+              description="A Python project that organizes, analyzes, and generates pdf reports for several U.S. drug markets, including ALK inhibitors, metastatic breast cancer drugs, norepinephrine and vasopressin, oral iron chelators, NK1 receptor antagonists, and 5-HT3 receptor antagonists."
               shortDescription="A python project that organizes, analyzes, and generates pdf reports for several drug markets."
               tech="Python 3, SQLite, Peewee, Pandas, NumPy, Matplotlib, XlsxWriter, HTML5, CSS3, Babel, Selenium, Unittest, Jupyter Notebook, IPython"
               url=""

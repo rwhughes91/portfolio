@@ -82,7 +82,7 @@ const AboutScreen: React.FC<Props> = ({ customRef }) => {
                 styles={{ marginBottom: '.5rem' }}
                 customClassNames={classes.text}
               >
-                Tech I use:
+                Technical Skills:
               </Text>
               <List items={techTags as string[]} />
             </div>
