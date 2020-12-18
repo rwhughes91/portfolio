@@ -1,5 +1,5 @@
 button.submitButton {
-  padding: 0.5em 2.5em;
+  padding: 0.65em 2.5em;
   margin-top: 0.5rem;
   background-color: var(--light-gray-2);
 }
@@ -20,6 +20,12 @@ button.submitButton span.submitButtonText {
 button.submitButton:hover span.submitButtonText,
 button.submitButton:active span.submitButtonText {
   color: var(--light-gray-1);
+}
+
+@media (min-width: 1200px) {
+  button.submitButton {
+    padding: 0.5em 2.5em;
+  }
 }
 
 @keyframes color {
