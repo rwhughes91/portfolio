@@ -6,19 +6,18 @@
   font-size: 3rem;
 }
 
-@media (min-width: 450px) {
-  .header {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 592px) {
+@media (min-width: 525px) {
   .header {
     font-size: 3.5rem;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 592px) {
+  .header {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 700px) {
   .header {
     font-size: 4.5rem;
   }
