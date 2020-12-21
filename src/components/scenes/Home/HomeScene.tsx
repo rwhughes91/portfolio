@@ -30,7 +30,7 @@ const HomeScreen: React.FC<Props> = ({ onScrollHandler }) => {
         <div className={classes.homeScene}>
           <Column customClassNames={classes.headers}>
             <Header customClassNames={classes.fadeIn}>Hi, I&apos;m Robbie Hughes.</Header>
-            <Header customClassNames={classes.fadeIn}>I&apos;m a full-stack engineer.</Header>
+            <Header customClassNames={classes.fadeIn}>I&apos;m a full-stack web developer.</Header>
             <div className={[classes.button, classes.slideUp].join(' ')}>
               <Button size="header" onPress={onScrollHandler}>
                 View my work
