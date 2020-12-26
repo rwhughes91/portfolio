@@ -47,7 +47,7 @@ const ProjectsScene: React.FC = () => {
                 'Authentication is required to use app.',
                 ' Please contact me if you wish to see a demo.',
               ]}
-              url="https://new-jersey-database.herokuapp.com/"
+              url="https://master.d3d7dkd4jp0e2d.amplifyapp.com/"
               customClassNames={classes.njtl}
             />
             <Card
