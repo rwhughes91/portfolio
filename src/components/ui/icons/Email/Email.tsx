@@ -18,6 +18,7 @@ const Email: React.FC<Props> = ({ customClassNames, inverted, small }) => {
         small ? classes.small : null,
       ].join(' ')}
       href="mailto: rwhughes91@google.com"
+      aria-label="Email"
     >
       <FiMail size={16} />
     </a>

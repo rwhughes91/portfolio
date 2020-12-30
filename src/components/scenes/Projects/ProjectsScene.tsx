@@ -42,7 +42,7 @@ const ProjectsScene: React.FC = () => {
               name="New Jersey Tax Lien Database"
               shortDescription="A web app/accounting tool for acquired tax liens in the state of New Jersey."
               description="A web app/accounting tool for acquired tax liens in the state of New Jersey. We used this tool for both accounting and financial analysis."
-              tech="JavaScript, React, Apollo Server (GraphQL), MongoDB, Redux, Redux-Saga, Socket.io, SendGrid/Twilio, CSS Modules, PostCSS, Webpack, Babel, Jest, AWS S3, AWS Amplify, AWS Elastic Beanstalk."
+              tech="JavaScript, React, Apollo Server (GraphQL), MongoDB, Redux, Redux-Saga, Socket.io, SendGrid/Twilio, CSS Modules, PostCSS, Webpack, Babel, Jest, AWS S3, AWS Amplify, AWS Elastic Beanstalk, Heroku."
               auth={[
                 'Authentication is required to use app.',
                 ' Please contact me if you wish to see a demo.',
